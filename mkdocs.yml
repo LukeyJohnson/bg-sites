@@ -1,0 +1,18 @@
+site_name: Platform Capabilities
+site_url: https://YOUR_USERNAME.github.io/platform-capabilities/
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+  palette: 
+    scheme: default
+    primary: indigo
+    accent: blue
+
+# These extensions enable the "Collapsible" syntax
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

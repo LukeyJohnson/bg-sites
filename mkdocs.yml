@@ -1,5 +1,6 @@
-site_name: Platform Capabilities
-site_url: https://YOUR_USERNAME.github.io/platform-capabilities/
+site_name: Deep Space Capabilities
+site_url: https://lukeyjohnson.github.io/bg-sites/
+repo_url: https://github.com/lukeyjohnson/bg-sites/
 theme:
   name: material
   features:
@@ -11,7 +12,14 @@ theme:
     primary: indigo
     accent: blue
 
-# These extensions enable the "Collapsible" syntax
+nav:
+  - Home: index.md
+  - Capabilities:
+      - DS Pro (Technical): index.md#1-ds-pro-technical-intelligence-digital-engineering
+      - DS Harmony (Field): index.md#2-ds-harmony-field-ecosystem-management
+      - DS Horizon (Ops): index.md#3-ds-horizon-operational-backbone
+  - Changelog: changelog.md
+
 markdown_extensions:
   - admonition
   - pymdownx.details

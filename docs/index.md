@@ -11,7 +11,7 @@ The ecosystem is segmented into three interoperable product lines:
 
 ---
 
-## 1. DS Pro: Technical Intelligence & Digital Engineering
+## 1. DS Pro: Technical Intelligence & Digital Engineering {: #ds-pro }
 
 **Target Audience:** Digital Engineers, BIM Managers, Data Analysts.
 
@@ -52,7 +52,7 @@ DS Pro transforms raw geometric and parametric data from models into actionable 
 
 ---
 
-## 2. DS Harmony: Field & Ecosystem Management
+## 2. DS Harmony: Field & Ecosystem Management {: #ds-harmony }
 
 **Target Audience:** Subcontractors, Site Workforce, Safety Managers.
 
@@ -80,7 +80,7 @@ DS Harmony bridges the gap between the head contractor and the extended supply c
 
 ---
 
-## 3. DS Horizon: Operational Backbone
+## 3. DS Horizon: Operational Backbone {: #ds-horizon }
 
 **Target Audience:** Project Managers, Commercial Teams, Site Managers.
 

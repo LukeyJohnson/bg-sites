@@ -15,9 +15,10 @@ theme:
 nav:
   - Home: index.md
   - Capabilities:
-      - DS Pro (Technical): index.md#1-ds-pro-technical-intelligence-digital-engineering
-      - DS Harmony (Field): index.md#2-ds-harmony-field-ecosystem-management
-      - DS Horizon (Ops): index.md#3-ds-horizon-operational-backbone
+      - DS Pro (Technical): index.md#ds-pro
+      - DS Harmony (Field): index.md#ds-harmony
+      - DS Horizon (Ops): index.md#ds-horizon
+  - Site and Mobile: siteapp.md
   - Changelog: changelog.md
 
 markdown_extensions:

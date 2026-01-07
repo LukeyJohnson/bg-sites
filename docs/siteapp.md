@@ -55,3 +55,23 @@ The DS Site mobile app provides a free digital passport that collects, stores, a
 * **Store Information:** Refresh knowledge anywhere, anytime (on and offline).
 * **Stay Current:** Instantly receive all updates and notifications to minimise the impact of training and inductions changing one day to the next.
 * **Free Access:** A free app for users ensures you don’t miss out on critical visual and digital content, whether you are a full-time employee or sub-contractor.
+
+---
+
+## Reliable, real-world solutions
+
+All solutions hinge on our proven award-winning framework, called the Experiential Learning Program (ELP), which leads teams through identifying, capturing and transferring organisational expertise. Using the ELP methodology and drawing on the decades of experience of our team of consultants, we help you to capture and communicate critical workplace procedures in the most visual means possible. Our framework empowers any sized organisation to take advantage of the use of mobile visual micro-learning tools in their business.
+
+### Operational solutions
+* **Supply chain training and instruction:** Tracked and monitored engagement with standardised visual resources through the QIN user interface, providing greater visibility into a remote sub-contractor workforce.
+* **Contractor management and compliance:** Created a mobile digital visual training, job allocation and compliance solution to better manage a sub-contractor labour force employed across multiple sites.
+* **Overcoming language and literacy barriers:** Provided translation services and native language support to existing videos and verification of engagement forms to ensure correct work procedures are comprehended and acted upon.
+* **Engagement visibility:** Tracked and monitored engagement with visual content.
+
+**Find out more**
+
+### Workforce development and training
+* **High-volume training solution:** Ensured industry practitioners engaged with supplemental training material to produce better and safer outcomes for tradespeople and customers.
+* **Mobile skills-refresher delivery:** Produced a series of instructional videos delivering standardised training via a mobile device to help remote workers to avoid potential hazards at work.
+* **Communication coaching:** Conducted a series of Effective Communication Workshops to equip frontline leaders to run compelling team briefings that increased engagement and understanding of critical information.
+* **Offline mobile capability:** Bridged the gap between the office and the field with a mobile solution that offers offline capabilities to remote workers, maintaining continuity and improving work processes.

@@ -31,6 +31,7 @@ DOCS = os.path.join(ROOT, "docs")
 ASSETS = os.path.join(DOCS, "assets", "changelog")
 BRANCH_DATE = "2025-08-01"
 LIVE_CHANGELOG = "https://feedback.deepspacesync.com/changelog/"
+DEAD_HOSTS = ("support.deepspacesync.com",)   # old help centre; links rendered as plain text, source files keep the URL
 CATEGORIES = {"DS Platform": "platform", "DS Pro for Design": "design", "DS Pro for Construction": "construction",
               "DS Site": "site", "KAI": "kai", "DS Sync for Revit": "revit", "DS Sync for Navisworks": "navisworks"}
 
@@ -86,7 +87,19 @@ class Images:
             lines = [f'!!! warning "Missing image · {pid}"', f'    `{caption}` has not been recovered yet. Original location: `{url_disp}`']
         return "\n" + "\n".join(indent + l for l in lines) + "\n"
 
-def convert_body(body, eid, entry, images):
+def rewrite_links(s, hosted):
+    """Cross-links between changelog entries target this site; dead external hosts become plain text."""
+    def cl(m):
+        text, cid = m.group(1), m.group(2)
+        return f"[{text}]({hosted[cid]}.md#cl-{cid})" if cid in hosted else m.group(0)
+    s = re.sub(r"(?<!!)\[([^\]]*)\]\(https?://feedback\.deepspacesync\.com/changelog/(\d+)/?\)", cl, s)
+    s = re.sub(r"(?<!!)\[([^\]]*)\]\(https?://feedback\.deepspacesync\.com/changelog/?\)", r"[\1](index.md)", s)
+    for h in DEAD_HOSTS:
+        s = re.sub(r"(?<!!)\[([^\]]*)\]\(https?://" + re.escape(h) + r"/[^)\s]*\)", r"\1", s)
+    return s
+
+def convert_body(body, eid, entry, images, hosted=None):
+    body = rewrite_links(body, hosted or {})
     s = re.sub(r"(?m)^([ \t]*)(#{1,5})\s+", lambda m: m.group(1) + "#" * min(len(m.group(2)) + 1, 4) + " ", body)
     out = []
     for line in s.split("\n"):
@@ -120,6 +133,7 @@ def main():
     images = Images(load_register(reg_path))
     years = defaultdict(list)
     for e in pre: years[e["date"][:4]].append(e)
+    hosted = {e["id"]: e["date"][:4] for e in pre}
     os.makedirs(os.path.join(DOCS, "changelog"), exist_ok=True)
     for y, es in years.items():
         parts = [f"---\ntitle: {y}\n---\n\n# Changelog {y}\n",
@@ -132,7 +146,8 @@ def main():
             meta.append(f'<span class="cl-date">{fmt_date(e["date"])}</span>')
             if eid.isdigit(): meta.append(f'<span class="cl-id">#{eid}</span>')
             if e.get("source_note"): meta.append(f'<span class="cl-src" title="{html.escape(e["source_note"], quote=True)}">announcement email</span>')
-            parts += [f'## {e["title"]} {{ #cl-{eid} }}\n', '<p class="cl-meta">' + " ".join(meta) + "</p>\n", convert_body(e["body"], eid, e, images) + "\n", "\n---\n"]
+            meta.append(f'<button class="cl-copy" type="button" data-anchor="cl-{eid}" title="Copy a direct link to this entry">Copy link</button>')
+            parts += [f'## {e["title"]} {{ #cl-{eid} }}\n', '<p class="cl-meta">' + " ".join(meta) + "</p>\n", convert_body(e["body"], eid, e, images, hosted) + "\n", "\n---\n"]
         open(os.path.join(DOCS, "changelog", f"{y}.md"), "w", encoding="utf-8").write("\n".join(parts))
 
     cats = sorted({e["category"] for e in pre})

@@ -44,6 +44,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/changelog.css
 
+extra_javascript:
+  - javascripts/changelog.js
+
 validation:
   nav:
     not_found: info   # nav uses index.md#anchor links on purpose; MkDocs cannot resolve anchors in nav

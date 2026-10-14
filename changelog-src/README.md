@@ -40,6 +40,8 @@ edit them by hand; run the build instead.
 - Start body headings at `##`; the build demotes them one level under the entry's own heading.
 - Bullet lists, bold, links, blockquotes and `??? note "..."` collapsible blocks all work (MkDocs Material).
 - `![caption](img:file.png)` → hosted image from `docs/assets/changelog/<id>/file.png`.
+- Links to `https://feedback.deepspacesync.com/changelog/<id>` are rewritten to the in-site anchor when that entry is hosted here; links to hosts listed in `DEAD_HOSTS` in the build script render as plain text.
+- Every entry has a stable anchor `#cl-<id>` (shown as the ¶ permalink and the "Copy link" button).
 - `![caption](https://original/url.jpg)` → hosted if `docs/assets/changelog/<id>/url.jpg` exists, otherwise rendered as a
   "Missing image · MISSING-IMG-<id>-<n>" placeholder so it can be recovered later.
 

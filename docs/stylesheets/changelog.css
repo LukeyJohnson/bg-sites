@@ -16,3 +16,6 @@
 .md-typeset figure img { border: 1px solid var(--md-default-fg-color--lightest); border-radius: 0.3rem; }
 .md-typeset figcaption { font-size: 0.75rem; color: var(--md-default-fg-color--light); }
 .md-typeset .admonition.warning.cl-missing { font-size: 0.75rem; }
+.cl-copy { margin-left: auto; padding: 0.1rem 0.6rem; border: 1px solid var(--md-default-fg-color--lighter); border-radius: 1rem; background: transparent; color: var(--md-default-fg-color--light); font: inherit; font-size: 0.7rem; cursor: pointer; }
+.cl-copy:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.cl-copy--done { border-color: #4caf50; color: #4caf50; }

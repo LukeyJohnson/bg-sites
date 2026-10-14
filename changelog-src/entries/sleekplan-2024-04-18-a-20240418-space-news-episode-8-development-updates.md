@@ -13,7 +13,7 @@ Episode 8 of the Space News newsletter rounded up the development work shipped i
 
 A major leap forward with an upgrade to Deep Space's Core Thread Technology — a new **Hybrid V2** model. The enhancement is not just about bigger data storage: it is about smarter, faster access to the data you need when you need it. V2 means quicker querying, increased integration capabilities, and the ability to scale massively to meet project demands.
 
-![Core Thread Technology Hybrid V2](img:Core_Thread_Tech_V2_(2).jpg)
+![Core Thread Technology Hybrid V2](img:Core_Thread_Tech_V2.jpg)
 
 ## Model Audit App
 

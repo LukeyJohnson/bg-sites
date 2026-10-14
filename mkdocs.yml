@@ -7,6 +7,8 @@ theme:
     - navigation.sections
     - navigation.expand
     - content.code.copy
+    - navigation.top
+    - toc.follow
   palette: 
     scheme: default
     primary: indigo
@@ -19,9 +21,29 @@ nav:
       - DS Harmony (Field): index.md#ds-harmony
       - DS Horizon (Ops): index.md#ds-horizon
   - Site and Mobile: siteapp.md
-  - Changelog: changelog.md
+  - Changelog:
+      - Overview: changelog/index.md
+      - 2025: changelog/2025.md
+      - 2024: changelog/2024.md
+      - 2023: changelog/2023.md
+      - 2022: changelog/2022.md
+      - 2021: changelog/2021.md
+      - 2020: changelog/2020.md
 
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.keys
+  - toc:
+      permalink: true
+      toc_depth: 2
+
+extra_css:
+  - stylesheets/changelog.css
+
+validation:
+  nav:
+    not_found: info   # nav uses index.md#anchor links on purpose; MkDocs cannot resolve anchors in nav

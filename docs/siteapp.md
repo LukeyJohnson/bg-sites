@@ -11,6 +11,7 @@ Revitalise and mobilise any business process and get the right information to th
 With the DS Site mobile application, workers can access everything they need to perform their role successfully and safely from a single location. Crucial information, instruction, and micro-learning videos can be easily accessed anytime and anywhere via a mobile device.
 
 Activate and make available valuable content to workers, whether they are:
+
 * Full-time employees
 * Part-time staff
 * Sub-contractor workforce
@@ -37,6 +38,7 @@ Getting the right information quickly to the right person is critical to ensure 
 
 ### Virtual eyes in the field
 The DS Site mobile app can be your virtual eyes in the field, providing visibility and insight across your organisation. It facilitates:
+
 * Inspections and audits
 * Real-time pre and post-job reports
 * Issue identification and resolution

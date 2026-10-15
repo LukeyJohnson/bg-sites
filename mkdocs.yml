@@ -28,9 +28,9 @@ nav:
   - Home: index.md
   - DS Pro:
       - Overview: ds-pro/index.md
-      - DS Pro (Technical): ds-pro/index.md#ds-pro
-      - DS Harmony (Field): ds-pro/index.md#ds-harmony
-      - DS Horizon (Ops): ds-pro/index.md#ds-horizon
+      - DS Pro (Technical): ds-pro/technical.md
+      - DS Harmony (Field): ds-pro/harmony.md
+      - DS Horizon (Ops): ds-pro/horizon.md
       - Site and Mobile: siteapp.md
       - Changelog:
           - Overview: changelog/index.md
@@ -69,7 +69,3 @@ extra_css:
 
 extra_javascript:
   - javascripts/changelog.js
-
-validation:
-  nav:
-    not_found: info   # nav uses page#anchor links on purpose; MkDocs cannot resolve anchors in nav

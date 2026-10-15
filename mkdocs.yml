@@ -1,4 +1,5 @@
-site_name: Deep Space Capabilities
+site_name: Black Grid
+site_description: Software built and hosted by Black Grid for construction and project delivery.
 site_url: https://lukeyjohnson.github.io/bg-sites/
 repo_url: https://github.com/lukeyjohnson/bg-sites/
 theme:
@@ -6,29 +7,47 @@ theme:
   features:
     - navigation.sections
     - navigation.expand
-    - content.code.copy
     - navigation.top
     - toc.follow
-  palette: 
-    scheme: default
-    primary: indigo
-    accent: blue
+    - content.code.copy
+  palette:
+    - scheme: slate
+      primary: black
+      accent: blue grey
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: black
+      accent: blue grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
 
 nav:
   - Home: index.md
-  - Capabilities:
-      - DS Pro (Technical): index.md#ds-pro
-      - DS Harmony (Field): index.md#ds-harmony
-      - DS Horizon (Ops): index.md#ds-horizon
-  - Site and Mobile: siteapp.md
-  - Changelog:
-      - Overview: changelog/index.md
-      - 2025: changelog/2025.md
-      - 2024: changelog/2024.md
-      - 2023: changelog/2023.md
-      - 2022: changelog/2022.md
-      - 2021: changelog/2021.md
-      - 2020: changelog/2020.md
+  - DS Pro:
+      - Overview: ds-pro/index.md
+      - DS Pro (Technical): ds-pro/index.md#ds-pro
+      - DS Harmony (Field): ds-pro/index.md#ds-harmony
+      - DS Horizon (Ops): ds-pro/index.md#ds-horizon
+      - Site and Mobile: siteapp.md
+      - Changelog:
+          - Overview: changelog/index.md
+          - 2025: changelog/2025.md
+          - 2024: changelog/2024.md
+          - 2023: changelog/2023.md
+          - 2022: changelog/2022.md
+          - 2021: changelog/2021.md
+          - 2020: changelog/2020.md
+  - Projects:
+      - ShadowGrid: projects/shadowgrid.md
+      - Client Implementation Board: projects/client-implementation-board.md
+      - PM Grid: projects/pmgrid.md
+      - ProXP: projects/proxp.md
+      - mytendrils: projects/mytendrils.md
+      - bg-mem: projects/bg-mem.md
+  - What Revit Wants: https://wrw.is/
 
 markdown_extensions:
   - admonition
@@ -37,11 +56,15 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
       toc_depth: 2
 
 extra_css:
+  - stylesheets/blackgrid.css
   - stylesheets/changelog.css
 
 extra_javascript:
@@ -49,4 +72,4 @@ extra_javascript:
 
 validation:
   nav:
-    not_found: info   # nav uses index.md#anchor links on purpose; MkDocs cannot resolve anchors in nav
+    not_found: info   # nav uses page#anchor links on purpose; MkDocs cannot resolve anchors in nav

@@ -1,134 +1,83 @@
-# Deep Space Construction Intelligence Platform
-
-## Executive Summary
-
-Deep Space is a comprehensive **Construction Operating System (OS)** designed to unify the disjointed data landscapes of mid-to-large-scale commercial builders. The platform replaces digitized fragmentation with a "Single Source of Truth" (SSOT) paradigm, ensuring data entered once propagates seamlessly across the project lifecycle—from tender to site inspection.
-
-The ecosystem is segmented into three interoperable product lines:
-* **DS Pro:** The technical intelligence engine for BIM and Data Analysts.
-* **DS Harmony:** The external collaboration layer for supply chain and site workforce.
-* **DS Horizon:** The operational backbone for financials, scheduling, and project management.
-
+---
+title: Home
+hide:
+  - toc
 ---
 
-## 1. DS Pro: Technical Intelligence & Digital Engineering {: #ds-pro }
+<div class="bg-hero" markdown>
 
-**Target Audience:** Digital Engineers, BIM Managers, Data Analysts.
+# Black Grid
 
-DS Pro transforms raw geometric and parametric data from models into actionable project intelligence. It manages the *data* of the building itself, ensuring model integrity and design validation.
+**Software built and hosted by Black Grid for construction and project delivery** — from the Deep Space construction operating system and Revit automation to AI-assisted project management and professional tooling.
 
-### Core Modules
+</div>
 
-??? note "BIM Management (DS BIM)"
-    **Model Audit App**
-    Automated model governance that runs checks against Revit and IFC models to ensure compliance with the BIM Execution Plan (BEP).
-    
-    * **Health Checks:** Validates file naming, identifies unconnected elements, monitors file sizes (e.g., <1GB), and flags imported CAD/image usage.
-    * **Scoring:** Aggregates checks into a "Model Health Score" with dashboards for discipline-specific drill-downs (Architecture, Structure, MEP).
-    * **Action Integration:** Allows users to tag engineers directly on specific model errors, linking the audit to the task management system.
+## What we build
 
-    **Coordination & Plugins**
-    * **Super Schedule:** Links model elements to schedule tasks for 4D simulation and planning.
-    * **Revizto Integration:** Pulls clash and markup data into Deep Space analytics to track resolution trends.
-    * **Unified Plugins:** Supports Revit, Navisworks, and IFC with SSO and Enterprise permissions.
+<div class="grid cards" markdown>
 
-??? note "Design Management (DS Design)"
-    **Verify App (LOI Checking)**
-    Validates the Level of Information (LOI) within model elements against defined schemas (e.g., Asset Information Requirements) for digital handovers.
-    
-    * **Parameter Validation:** Checks existence and format of required parameters (e.g., "FireRating", "WarrantyDate").
-    * **Completeness Tracking:** Tracks completion % by asset class to gate model submissions based on data maturity.
+-   :material-cube-outline:{ .lg .middle } __DS Pro__
 
-    **Drawing Management**
-    * **Sheets and Files:** Manages sheet indexes and file metadata to synchronize the drawing register with model views.
+    ---
 
-??? note "Analytics & AI (KAI)"
-    **Enterprise Intelligence**
-    * **Power BI Integration:** "Open data" architecture allows direct connection of Power BI to the Deep Space data store, enabling cross-domain dashboards (e.g., correlating Design Clashes with Variation Costs).
-    * **Portfolio Dashboards:** Aggregates metrics like total variation value and safety incident rates into executive command centers.
+    The technical intelligence engine of the **Deep Space** construction operating system: model audit, BIM data, programme and cost integration, DS Site in the field, and KAI. Capabilities reference, mobile app overview and the full release changelog back to 2020.
 
-    **KAI (Knowledge AI)**
-    * An intelligent agent capable of answering natural language questions (e.g., "Show me all overdue defects on Level 3") and generating ad-hoc reports.
+    [:octicons-arrow-right-24: Explore DS Pro](ds-pro/index.md) · [Changelog](changelog/index.md)
 
----
+-   :material-script-text-outline:{ .lg .middle } __ShadowGrid__
 
-## 2. DS Harmony: Field & Ecosystem Management {: #ds-harmony }
+    ---
 
-**Target Audience:** Subcontractors, Site Workforce, Safety Managers.
+    A Black Grid add-in for Autodesk Revit that puts a **ShadowGrid** tab on the ribbon and runs automation **script packs** supplied by Black Grid. Ships with its own embedded Python runtime, installs per user with no admin rights, one installer for Revit 2023–2025.
 
-DS Harmony bridges the gap between the head contractor and the extended supply chain. It acts as a governance layer, ensuring the workforce is compliant, informed, and integrated.
+    [:octicons-arrow-right-24: ShadowGrid](projects/shadowgrid.md)
 
-### Core Modules
+-   :material-view-dashboard-outline:{ .lg .middle } __Client Implementation Board__
 
-??? note "Vendor Management & Compliance"
-    **Supply Chain Governance**
-    * **Company & Worker Registries:** A master database tracking insurance, licenses, and skill qualifications for all vendors.
-    * **Insurance Tracking:** Automated monitoring of policy expiry dates with notifications sent at 1-month, 1-week, and 1-day intervals.
-    * **Custom Metadata:** Defines fields for diversity ratings, tier classifications, or trade codes to filter vendors for procurement.
+    ---
 
-??? note "Worker Inductions & Onboarding"
-    **Digital Onboarding**
-    * **Remote Workflows:** Workers complete inductions remotely via the platform before arriving on site.
-    * **Pre-filled Forms:** Utilizes stored vendor metadata to auto-fill employer details, reducing data entry errors.
-    * **Real-time Status:** Site admins view workers as "Inducted," "Pending," or "Expired," linking status to site access control.
+    A client-safe portal into the implementation work Black Grid tracks for each customer: read-only issue lists and detail pages drawn from a GitHub Projects board, with verified email-link sign-in and sanitised data.
 
-??? note "DS Site (Mobile Interface)"
-    **Field Efficiency**
-    * **Site-First UI:** Optimized for field use with dark mode, high-contrast "Go Green" action buttons, and simplified navigation.
-    * **Badge Sharing:** Workers earn portable digital badges for safety/skills that are recognized across different projects.
-    * **PDF-to-Form AI:** Converts static PDF safety forms (SWMS, plant checklists) into interactive digital forms instantly.
+    [:octicons-arrow-right-24: Client Implementation Board](projects/client-implementation-board.md)
 
----
+-   :material-grid:{ .lg .middle } __PM Grid__
 
-## 3. DS Horizon: Operational Backbone {: #ds-horizon }
+    ---
 
-**Target Audience:** Project Managers, Commercial Teams, Site Managers.
+    **AI-assisted project management.** A high-density, monochrome grid for projects, events and tasks, with modular DataBlocks you can select as context for an AI agent that generates structured tasks and events.
 
-DS Horizon functions as the central nervous system for the construction enterprise, integrating Preconstruction, Scheduling, Procurement, Delivery, and HSEQ.
+    [:octicons-arrow-right-24: PM Grid](projects/pmgrid.md) · [pmgrid.blackgrid.com.au](https://pmgrid.blackgrid.com.au/)
 
-### Core Modules
+-   :material-account-star-outline:{ .lg .middle } __ProXP__
 
-??? note "Preconstruction & Estimating"
-    **Opportunity Management**
-    * **Automatic Project Creation:** Converts tender opportunities to live projects, migrating all client details, bid scopes, and documentation automatically.
-    * **Tender Packages:** Centralizes package management to track bid scopes against baseline budgets and ensure pricing utilizes current design revisions.
+    ---
 
-??? note "Advanced Scheduling"
-    **Dynamic Programme Management**
-    * **Interoperability:** Supports XML import from Primavera P6, Asta Powerproject, and MS Project, preserving complex WBS and dependencies.
-    * **Subcontractor Portal:** Allows trades to propose date changes or report progress % directly, creating a collaborative review workflow.
-    * **Bulk Editing:** Enables mass modification of task sequences to adapt to site variability.
+    **Your professional experience, amplified.** Record project work with roles and context, connect past collaborators, collect peer kudos that validate your involvement, and publish a shareable portfolio.
 
-??? note "Commercial & Financial Control"
-    **Integrated Cost Management**
-    * **Head Contract Register:** Real-time tracking of Total Contract Value, Variations, Claims, and Payment Schedules.
-    * **Budget Structure:** Hierarchical structure (Budget Categories vs. Cost Codes) with bulk import capabilities from Excel.
-    * **Xero Integration:** Bidirectional sync of Invoices, Payments, and Purchase Orders, mapping Cost Codes to the Chart of Accounts.
-    * **AI Invoice Processing:** Automated parsing of PDF invoices to extract details and cross-reference against Purchase Orders.
+    [:octicons-arrow-right-24: ProXP](projects/proxp.md) · [proxp.blackgrid.com.au](https://proxp.blackgrid.com.au/)
 
-??? note "Delivery & Site Control"
-    **Site Coordination**
-    * **Location Breakdown Structure (LBS):** Enforces standardized spatial hierarchy (Site → Building → Level → Room) for all defects and RFIs.
-    * **Action Engine:** A pervasive task management layer connecting disparate records (RFIs, Site Instructions, Defects) into a semantic knowledge graph.
-    * **Daily Diaries:** Streamlined interface for high-frequency daily reporting.
+-   :material-content-save-outline:{ .lg .middle } __mytendrils__
 
-??? note "HSEQ (Safety & Quality)"
-    **Integrated Workflows**
-    * **Gated Progress:** Links digital SWMS and Permits to the daily diary, preventing work logging without safety documentation.
-    * **Scan-to-Open:** QR codes on physical assets instantly open relevant inspection forms.
-    * **Evidence Automation:** Automatically extracts photos and PDFs from submitted forms and saves them to the Common Data Environment (CDE).
+    ---
 
-??? note "Documentation (CDE)"
-    **Document Control**
-    * **Document Register:** "Promotes" files to official records with enforced metadata and transmittal guardrails.
-    * **Correspondence Logging:** Parses project emails to index content and auto-extract attachments into the CDE.
+    **Save AI conversations.** Capture a conversation from ChatGPT, Claude, Gemini, Cursor or any tool with one HTTP POST and receive it by email — no sign-in, callable from the command line, scripts or mobile.
 
----
+    [:octicons-arrow-right-24: mytendrils](projects/mytendrils.md) · [mytendrils.blackgrid.com.au](https://mytendrils.blackgrid.com.au/)
 
-## 4. Strategic Architecture
+-   :material-brain:{ .lg .middle } __bg-mem__
 
-The platform is built on a **Unified Data Schema**, enabling advanced cross-module intelligence:
+    ---
 
-* **5D BIM:** Cost Codes in *Horizon* link to Model Elements in *DS Pro*.
-* **Spatial Intelligence:** Locations in the LBS are shared by *Harmony* (inductions) and *Horizon* (defects), correlating safety incidents with specific work areas.
-* **Unified Execution:** The Action Engine aggregates tasks from Model Audits, Safety Rectifications, and Contract Administration into a single execution stream.
+    **A self-hosted memory layer for any LLM.** Durable, searchable long-term memory that any model or tool can read and write over the Model Context Protocol — facts, decisions and context that survive the session, on infrastructure you own.
+
+    [:octicons-arrow-right-24: bg-mem](projects/bg-mem.md)
+
+-   :material-rss:{ .lg .middle } __What Revit Wants__
+
+    ---
+
+    Luke Johnson's long-running blog on Revit, BIM, construction technology and AI-empowered project management — pragmatic, domain-first commentary on where digital construction is going.
+
+    [:octicons-arrow-right-24: wrw.is](https://wrw.is/)
+
+</div>

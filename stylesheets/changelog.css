@@ -1,0 +1,21 @@
+/* Changelog badges and entry metadata */
+.cl-meta { margin: -0.4rem 0 1rem; font-size: 0.8rem; color: var(--md-default-fg-color--light); display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.cl-badge { display: inline-block; padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.7rem; font-weight: 700; line-height: 1.5; color: #fff; background: #607d8b; white-space: nowrap; }
+.cl-badge-platform { background: #03a9f4; }
+.cl-badge-design { background: #673ab7; }
+.cl-badge-construction { background: #ff9800; }
+.cl-badge-site { background: #4caf50; }
+.cl-badge-kai { background: #e91e63; }
+.cl-badge-revit { background: #1565c0; }
+.cl-badge-navisworks { background: #00897b; }
+.cl-badge-bim { background: #5e35b1; }
+.cl-inferred, .cl-src { display: inline-block; padding: 0 0.4rem; border: 1px dashed var(--md-default-fg-color--lighter); border-radius: 0.3rem; font-size: 0.65rem; color: var(--md-default-fg-color--light); cursor: help; }
+.cl-id { font-family: var(--md-code-font-family); opacity: 0.7; }
+.cl-note { font-size: 0.8rem; color: var(--md-default-fg-color--light); }
+.md-typeset figure { margin: 1rem auto; }
+.md-typeset figure img { border: 1px solid var(--md-default-fg-color--lightest); border-radius: 0.3rem; }
+.md-typeset figcaption { font-size: 0.75rem; color: var(--md-default-fg-color--light); }
+.md-typeset .admonition.warning.cl-missing { font-size: 0.75rem; }
+.cl-copy { margin-left: auto; padding: 0.1rem 0.6rem; border: 1px solid var(--md-default-fg-color--lighter); border-radius: 1rem; background: transparent; color: var(--md-default-fg-color--light); font: inherit; font-size: 0.7rem; cursor: pointer; }
+.cl-copy:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.cl-copy--done { border-color: #4caf50; color: #4caf50; }

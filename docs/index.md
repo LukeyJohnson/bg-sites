@@ -1,83 +1,102 @@
 ---
-title: Home
+title: Black Grid — Software for construction and project delivery
+description: Revit automation, construction intelligence and practical AI tools. Explore software built and hosted by Black Grid.
 hide:
+  - navigation
   - toc
 ---
 
-<div class="bg-hero" markdown>
+<div class="bg-home">
 
-# Black Grid
+<span id="black-grid"></span>
 
-**Software built and hosted by Black Grid for construction and project delivery** — from the Deep Space construction operating system and Revit automation to AI-assisted project management and professional tooling.
+<section class="bg-hero" aria-labelledby="home-title">
+  <div class="bg-hero-copy">
+    <p class="bg-eyebrow"><span class="bg-signal" aria-hidden="true"></span> Independent tools. Connected thinking.</p>
+    <h1 id="home-title">Good tools.<br><span>Great work.</span></h1>
+    <p class="bg-hero-description">Software for the people moving construction forward. From Revit automation to project intelligence, we turn complex work into clear next steps.</p>
+    <div class="bg-actions">
+      <a class="bg-button bg-button-primary" href="projects/shadowgrid/">Explore ShadowGrid <span aria-hidden="true">↗</span></a>
+      <a class="bg-button bg-button-secondary" href="#our-tools">Find your next tool <span aria-hidden="true">↓</span></a>
+    </div>
+    <p class="bg-hero-note">Built and hosted by Black Grid.</p>
+  </div>
+  <div class="bg-hero-visual" aria-hidden="true">
+    <div class="bg-visual-label"><span>BLACK GRID</span><span>CONNECT THE PIECES</span></div>
+    <img src="assets/ux/grid-field.svg" alt="" width="640" height="560" fetchpriority="high">
+    <div class="bg-visual-footer"><span>MODELS / DATA / PEOPLE</span><span class="bg-cross">+</span></div>
+  </div>
+</section>
 
+<div class="bg-discipline-strip" aria-label="Our focus">
+  <span>Revit automation</span><span>Construction intelligence</span><span>Practical AI</span><span>Project delivery</span>
 </div>
 
-## What we build
+<section class="bg-feature" aria-labelledby="shadowgrid-feature">
+  <div class="bg-feature-copy">
+    <p class="bg-eyebrow">01 / In the spotlight</p>
+    <h2 id="shadowgrid-feature">Your workflow.<br>On the ribbon.</h2>
+    <p class="bg-product-name">ShadowGrid <span>for Autodesk Revit</span></p>
+    <p>Less time repeating yourself. Run purpose-built automation from a dedicated Revit tab, with script packs that grow alongside your team's work.</p>
+    <a class="bg-text-link" href="projects/shadowgrid/">Meet ShadowGrid <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="bg-feature-panel">
+    <div class="bg-panel-heading"><span class="bg-monogram" aria-hidden="true">SG</span><span>Small scripts.<br>Big difference.</span><span class="bg-panel-index">01—03</span></div>
+    <ol class="bg-workflow-list">
+      <li><span>01</span><div><strong>Select &amp; filter</strong><p>Get the right elements, ready for the next step.</p></div><span aria-hidden="true">↗</span></li>
+      <li><span>02</span><div><strong>Tag &amp; check</strong><p>Apply the rules. Find what needs attention.</p></div><span aria-hidden="true">↗</span></li>
+      <li><span>03</span><div><strong>Clean &amp; repeat</strong><p>Turn recurring model work into repeatable tools.</p></div><span aria-hidden="true">↗</span></li>
+    </ol>
+    <div class="bg-panel-footnote"><span>REVIT 2023—2025</span><span>NO ADMIN RIGHTS NEEDED</span></div>
+  </div>
+</section>
 
-<div class="grid cards" markdown>
+<span id="what-we-build"></span>
+<section class="bg-tools" id="our-tools" aria-labelledby="tools-title">
+  <div class="bg-section-heading">
+    <div><p class="bg-eyebrow">02 / The Black Grid toolkit</p><h2 id="tools-title">A tool for the next step.</h2></div>
+    <p>Built around real work.<br>Explore what fits yours.</p>
+  </div>
+  <div class="bg-product-grid">
+    <a class="bg-product-card bg-product-card-wide" href="ds-pro/">
+      <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">DS</span><span class="bg-card-category">Construction intelligence</span><span class="bg-card-arrow" aria-hidden="true">↗</span></div>
+      <h3>Deep Space</h3><p>Connect model data, field teams and project operations in one construction operating system.</p>
+      <div class="bg-product-lines"><span>DS Pro</span><span>DS Harmony</span><span>DS Horizon</span></div>
+      <span class="bg-card-link">Explore the platform <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="bg-product-card" href="projects/client-implementation-board/">
+      <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">CB</span><span class="bg-card-arrow" aria-hidden="true">↗</span></div>
+      <p class="bg-card-category">Client collaboration</p><h3>Client Implementation Board</h3><p>A clear, secure view of the work moving your implementation forward.</p>
+      <span class="bg-card-link">See how it works <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="bg-product-card" href="projects/pmgrid/">
+      <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">PM</span><span class="bg-card-arrow" aria-hidden="true">↗</span></div>
+      <p class="bg-card-category">AI-assisted project management</p><h3>PM Grid</h3><p>Projects, tasks and context, connected in a workspace built for the way you think.</p>
+      <span class="bg-card-link">Explore PM Grid <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="bg-product-card" href="projects/proxp/">
+      <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">PX</span><span class="bg-card-arrow" aria-hidden="true">↗</span></div>
+      <p class="bg-card-category">Professional portfolios</p><h3>ProXP</h3><p>Your project experience, backed by the people who were there with you.</p>
+      <span class="bg-card-link">Discover ProXP <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="bg-product-card" href="projects/mytendrils/">
+      <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">mt</span><span class="bg-card-arrow" aria-hidden="true">↗</span></div>
+      <p class="bg-card-category">AI conversation capture</p><h3>mytendrils</h3><p>Keep the useful part of the conversation. Capture your AI work and send it to email.</p>
+      <span class="bg-card-link">Meet mytendrils <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="bg-product-card" href="projects/bg-mem/">
+      <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">bg</span><span class="bg-card-arrow" aria-hidden="true">↗</span></div>
+      <p class="bg-card-category">Memory for AI</p><h3>bg-mem</h3><p>Context that outlasts a session. A durable memory layer, on infrastructure you own.</p>
+      <span class="bg-card-link">Explore bg-mem <span aria-hidden="true">→</span></span>
+    </a>
+  </div>
+</section>
 
--   :material-cube-outline:{ .lg .middle } __DS Pro__
+<section class="bg-journal" aria-labelledby="journal-title">
+  <div><p class="bg-eyebrow">03 / Ideas from the field</p><h2 id="journal-title">What Revit Wants.</h2><p>Luke Johnson on Revit, BIM, construction technology and the tools changing how we work.</p></div>
+  <a class="bg-button bg-button-secondary" href="https://wrw.is/">Read the journal <span aria-hidden="true">↗</span></a>
+</section>
 
-    ---
-
-    The technical intelligence engine of the **Deep Space** construction operating system: model audit, BIM data, programme and cost integration, DS Site in the field, and KAI. Capabilities reference, mobile app overview and the full release changelog back to 2020.
-
-    [:octicons-arrow-right-24: Explore DS Pro](ds-pro/index.md) · [Changelog](changelog/index.md)
-
--   :material-script-text-outline:{ .lg .middle } __ShadowGrid__
-
-    ---
-
-    A Black Grid add-in for Autodesk Revit that puts a **ShadowGrid** tab on the ribbon and runs automation **script packs** supplied by Black Grid. Ships with its own embedded Python runtime, installs per user with no admin rights, one installer for Revit 2023–2025.
-
-    [:octicons-arrow-right-24: ShadowGrid](projects/shadowgrid.md)
-
--   :material-view-dashboard-outline:{ .lg .middle } __Client Implementation Board__
-
-    ---
-
-    A client-safe portal into the implementation work Black Grid tracks for each customer: read-only issue lists and detail pages drawn from a GitHub Projects board, with verified email-link sign-in and sanitised data.
-
-    [:octicons-arrow-right-24: Client Implementation Board](projects/client-implementation-board.md)
-
--   :material-grid:{ .lg .middle } __PM Grid__
-
-    ---
-
-    **AI-assisted project management.** A high-density, monochrome grid for projects, events and tasks, with modular DataBlocks you can select as context for an AI agent that generates structured tasks and events.
-
-    [:octicons-arrow-right-24: PM Grid](projects/pmgrid.md) · [pmgrid.blackgrid.com.au](https://pmgrid.blackgrid.com.au/)
-
--   :material-account-star-outline:{ .lg .middle } __ProXP__
-
-    ---
-
-    **Your professional experience, amplified.** Record project work with roles and context, connect past collaborators, collect peer kudos that validate your involvement, and publish a shareable portfolio.
-
-    [:octicons-arrow-right-24: ProXP](projects/proxp.md) · [proxp.blackgrid.com.au](https://proxp.blackgrid.com.au/)
-
--   :material-content-save-outline:{ .lg .middle } __mytendrils__
-
-    ---
-
-    **Save AI conversations.** Capture a conversation from ChatGPT, Claude, Gemini, Cursor or any tool with one HTTP POST and receive it by email — no sign-in, callable from the command line, scripts or mobile.
-
-    [:octicons-arrow-right-24: mytendrils](projects/mytendrils.md) · [mytendrils.blackgrid.com.au](https://mytendrils.blackgrid.com.au/)
-
--   :material-brain:{ .lg .middle } __bg-mem__
-
-    ---
-
-    **A self-hosted memory layer for any LLM.** Durable, searchable long-term memory that any model or tool can read and write over the Model Context Protocol — facts, decisions and context that survive the session, on infrastructure you own.
-
-    [:octicons-arrow-right-24: bg-mem](projects/bg-mem.md)
-
--   :material-rss:{ .lg .middle } __What Revit Wants__
-
-    ---
-
-    Luke Johnson's long-running blog on Revit, BIM, construction technology and AI-empowered project management — pragmatic, domain-first commentary on where digital construction is going.
-
-    [:octicons-arrow-right-24: wrw.is](https://wrw.is/)
+<div class="bg-home-signoff"><span>BLACK GRID</span><span>Built for the work ahead.</span><a href="#home-title">Back to top ↑</a></div>
 
 </div>

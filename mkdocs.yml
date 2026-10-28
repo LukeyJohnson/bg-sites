@@ -1,12 +1,17 @@
 site_name: Black Grid
 site_description: Software built and hosted by Black Grid for construction and project delivery.
-site_url: https://lukeyjohnson.github.io/bg-sites/
+site_url: https://blackgrid.com.au/
 repo_url: https://github.com/lukeyjohnson/bg-sites/
 theme:
   name: material
+  logo: assets/ux/blackgrid-mark.svg
+  favicon: assets/ux/blackgrid-mark.svg
+  font: false
   features:
-    - navigation.sections
-    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.path
     - navigation.top
     - toc.follow
     - content.code.copy
@@ -25,8 +30,8 @@ theme:
         name: Switch to dark mode
 
 nav:
-  - Home: index.md
-  - DS Pro:
+  - ShadowGrid: projects/shadowgrid.md
+  - Deep Space:
       - Overview: ds-pro/index.md
       - DS Pro (Technical): ds-pro/technical.md
       - DS Harmony (Field): ds-pro/harmony.md
@@ -40,14 +45,18 @@ nav:
           - 2022: changelog/2022.md
           - 2021: changelog/2021.md
           - 2020: changelog/2020.md
-  - Projects:
-      - ShadowGrid: projects/shadowgrid.md
-      - Client Implementation Board: projects/client-implementation-board.md
-      - PM Grid: projects/pmgrid.md
-      - ProXP: projects/proxp.md
-      - mytendrils: projects/mytendrils.md
-      - bg-mem: projects/bg-mem.md
+  - Client Board: projects/client-implementation-board.md
+  - PM Grid: projects/pmgrid.md
+  - ProXP: projects/proxp.md
+  - mytendrils: projects/mytendrils.md
+  - bg-mem: projects/bg-mem.md
   - What Revit Wants: https://wrw.is/
+
+not_in_nav: |
+  /index.md
+
+exclude_docs: |
+  /assets/ux/README.md
 
 markdown_extensions:
   - admonition

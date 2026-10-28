@@ -49,4 +49,4 @@ DS Horizon functions as the central nervous system for the construction enterpri
 
 ---
 
-[:material-arrow-left: DS Pro overview](index.md)
+[:material-arrow-left: Deep Space overview](index.md)

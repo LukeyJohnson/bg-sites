@@ -2,9 +2,15 @@
 title: PM Grid
 ---
 
+<div class="bg-page-intro" markdown>
+
+<p class="bg-eyebrow">Black Grid / AI-assisted project management</p>
+
 # PM Grid
 
 <p class="bg-lead">AI-assisted project management in a high-density, monochrome grid.</p>
+
+</div>
 
 [Open PM Grid :material-open-in-new:](https://pmgrid.blackgrid.com.au/){ .md-button .md-button--primary }
 

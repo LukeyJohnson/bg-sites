@@ -32,4 +32,4 @@ DS Harmony bridges the gap between the head contractor and the extended supply c
 
 ---
 
-[:material-arrow-left: DS Pro overview](index.md)
+[:material-arrow-left: Deep Space overview](index.md)

@@ -2,9 +2,15 @@
 title: bg-mem
 ---
 
+<div class="bg-page-intro" markdown>
+
+<p class="bg-eyebrow">Black Grid / Memory for AI</p>
+
 # bg-mem
 
 <p class="bg-lead">A self-hosted memory layer for any LLM.</p>
+
+</div>
 
 bg-mem gives language-model tools a durable, searchable long-term memory that you own and run yourself. Facts, decisions and context captured in one session are available to the next, to a different model, or to a different tool, without depending on any vendor's memory feature.
 

@@ -2,9 +2,15 @@
 title: ProXP
 ---
 
+<div class="bg-page-intro" markdown>
+
+<p class="bg-eyebrow">Black Grid / Professional portfolios</p>
+
 # ProXP
 
 <p class="bg-lead">Your professional experience, amplified.</p>
+
+</div>
 
 [Open ProXP :material-open-in-new:](https://proxp.blackgrid.com.au/){ .md-button .md-button--primary }
 
@@ -16,3 +22,8 @@ ProXP is a portfolio platform for professionals who want their project work to c
 2. **Connect past collaborators** who were on the same projects.
 3. **Collect kudos** — peer endorsements that verify your contribution.
 4. **Publish a shareable public portfolio** backed by that verified history.
+
+<figure class="bg-screenshot">
+  <a href="../../assets/ux/proxp-public.webp" aria-label="View the full proxp screenshot"><img src="../../assets/ux/proxp-public.webp" alt="ProXP public landing page with Get Started and View Demo links." width="1440" height="1000" loading="lazy"></a>
+  <figcaption>The public ProXP landing page — project experience and collaborator endorsements. Captured October 2026.</figcaption>
+</figure>

@@ -1,10 +1,20 @@
 ---
-title: DS Pro
+title: Deep Space
 ---
 
-# DS Pro — Deep Space Construction Intelligence Platform
+<div class="bg-page-intro" markdown>
 
-<p class="bg-lead">Deep Space is the construction operating system Black Grid builds, implements and supports. This section is the capabilities reference, the DS Site mobile app overview, and the complete release changelog.</p>
+<p class="bg-eyebrow">Black Grid / Construction intelligence</p>
+
+<span id="ds-pro-deep-space-construction-intelligence-platform"></span>
+
+# Deep Space
+
+<p class="bg-lead">One construction operating system. Technical intelligence, field collaboration and project operations — connected.</p>
+
+</div>
+
+Deep Space is the construction operating system Black Grid builds, implements and supports. Explore the capabilities reference, DS Site mobile overview and complete release changelog.
 
 ## Executive Summary
 
@@ -18,7 +28,7 @@ The ecosystem is segmented into three interoperable product lines:
 
 ## Product lines
 
-<div class="grid cards" markdown>
+<div class="grid cards bg-capabilities" markdown>
 
 -   :material-cube-outline:{ .lg .middle } <span id="ds-pro"></span>__DS Pro — Technical Intelligence__
 

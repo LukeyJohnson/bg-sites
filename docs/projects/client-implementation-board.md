@@ -2,9 +2,15 @@
 title: Client Implementation Board
 ---
 
+<div class="bg-page-intro" markdown>
+
+<p class="bg-eyebrow">Black Grid / Client collaboration</p>
+
 # Client Implementation Board
 
 <p class="bg-lead">A client-safe window into the implementation work Black Grid tracks for each customer.</p>
+
+</div>
 
 Implementation issues are managed on a GitHub Projects board. The Client Implementation Board gives customers a read-only view of that work — an issue list and issue detail pages — without exposing the underlying repository.
 

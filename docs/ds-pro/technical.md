@@ -45,4 +45,4 @@ DS Pro transforms raw geometric and parametric data from models into actionable 
 
 ---
 
-[:material-arrow-left: DS Pro overview](index.md)
+[:material-arrow-left: Deep Space overview](index.md)

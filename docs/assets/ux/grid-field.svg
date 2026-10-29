@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="560" viewBox="0 0 640 560" fill="none">
+<defs>
+  <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9efeb"/><stop offset="1" stop-color="#818e87"/></linearGradient>
+  <linearGradient id="left" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6b7771"/><stop offset="1" stop-color="#222c27"/></linearGradient>
+  <linearGradient id="right" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#35443c"/><stop offset="1" stop-color="#111b15"/></linearGradient>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcffca"/><stop offset="1" stop-color="#9ed982"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#b0dc94" stop-opacity=".13"/><stop offset="1" stop-color="#b0dc94" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="64" height="38" patternUnits="userSpaceOnUse" patternTransform="translate(320 108)"><path d="M0 0L64 38M64 0L0 38" stroke="#899b8c" stroke-opacity=".16" stroke-width=".7"/></pattern>
+  <g id="block"><path d="M0 0L80-46 160 0 80 46Z" fill="url(#top)"/><path d="M0 0L80 46V112L0 66Z" fill="url(#left)"/><path d="M80 46L160 0V66L80 112Z" fill="url(#right)"/><path d="M0 0L80 46 160 0M80 46V112" stroke="#d3e1d6" stroke-opacity=".4"/></g>
+</defs>
+<ellipse cx="335" cy="290" rx="290" ry="250" fill="url(#halo)"/>
+<path d="M-60 280L320 55 710 280 320 510Z" fill="url(#grid)"/>
+<path d="M80 338L320 477 560 338M80 338V215M560 338V215" stroke="#839487" stroke-opacity=".3" stroke-dasharray="3 7"/>
+<path d="M320 100V475M80 215L560 492M560 215L80 492" stroke="#829c83" stroke-opacity=".12"/>
+<g opacity=".32"><use href="#block" x="160" y="212"/><use href="#block" x="320" y="212"/><use href="#block" x="240" y="258"/></g>
+<use href="#block" x="240" y="146"/><use href="#block" x="160" y="258"/><use href="#block" x="320" y="258"/><use href="#block" x="240" y="304"/>
+<g><path d="M240 212L320 166 400 212 320 258Z" fill="url(#green)"/><path d="M240 212L320 258V324L240 278Z" fill="#8db974"/><path d="M320 258L400 212V278L320 324Z" fill="#537748"/><path d="M240 212L320 258 400 212M320 258V324" stroke="#edffe3" stroke-opacity=".8"/></g>
+<g stroke="#d4e6d3" stroke-opacity=".5"><path d="M59 203h14m-7-7v14M566 203h14m-7-7v14M312 486h14m-7-7v14"/></g>
+<path d="M400 168L458 134H532" stroke="#c3f5aa" stroke-opacity=".5"/><circle cx="400" cy="168" r="3" fill="#c3f5aa"/>
+<text x="470" y="124" font-family="monospace" font-size="10" letter-spacing="2" fill="#b7c9bb">MAKE IT CONNECT.</text>
+</svg>

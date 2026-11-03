@@ -1,0 +1,87 @@
+{
+  "channel": {
+    "name": "Black Grid AI (formerly What Revit Wants)",
+    "url": "https://www.youtube.com/@lukesjohnson"
+  },
+  "views_checked": "2026-11-03",
+  "featured": {
+    "id": "15NjasqHjEQ",
+    "title": "Something Tech River City Labs 2025 - Tech Talk - Deep Space Construction",
+    "description": "Luke on product–market fit, the practical role of AI and connecting the construction project lifecycle.",
+    "duration_seconds": 627,
+    "published": "2025-10-06",
+    "view_count": 20,
+    "poster": "assets/videos/15NjasqHjEQ.jpg"
+  },
+  "groups": [
+    {
+      "id": "popular-bim",
+      "title": "Popular BIM guides",
+      "intro": "Three of the channel’s most-watched Revit and BIM resources, selected for practical project work.",
+      "videos": [
+        {
+          "id": "RuYely7lu-0",
+          "title": "Revit Coordinate System - 36 minute explanation",
+          "description": "Understand Revit coordinates, true north and how multiple buildings sit together on a site.",
+          "duration_seconds": 2182,
+          "published": "2013-02-11",
+          "view_count": 100789,
+          "poster": "assets/videos/RuYely7lu-0.jpg",
+          "credit": "Original explainer by cwm9; shared on the WRW channel."
+        },
+        {
+          "id": "IfYX19e1WIw",
+          "title": "Link Excel spreadsheet data into Revit",
+          "description": "A concise workflow linking spreadsheet information into Revit through AutoCAD.",
+          "duration_seconds": 190,
+          "published": "2011-10-12",
+          "view_count": 45426,
+          "poster": "assets/videos/IfYX19e1WIw.jpg"
+        },
+        {
+          "id": "ipiquMGyaGI",
+          "title": "Save In-Place Family as RFA file (component family)",
+          "description": "A quick demonstration of saving an in-place Revit family as a reusable component family.",
+          "duration_seconds": 35,
+          "published": "2011-07-28",
+          "view_count": 15218,
+          "poster": "assets/videos/ipiquMGyaGI.jpg"
+        }
+      ]
+    },
+    {
+      "id": "deep-space",
+      "title": "Deep Space in practice",
+      "intro": "Platform demonstrations and automation from the archive, alongside AI and MCP workflows.",
+      "videos": [
+        {
+          "id": "K14TZiXwGBo",
+          "title": "Deep Space Sync Platform and Revit Addin Updated",
+          "description": "An archive walkthrough of the Deep Space platform and its Revit synchronisation add-in.",
+          "duration_seconds": 174,
+          "published": "2020-05-21",
+          "view_count": 853,
+          "poster": "assets/videos/K14TZiXwGBo.jpg"
+        },
+        {
+          "id": "twwuX2ry4ns",
+          "title": "Running Dynamo Automation Scripts with Deep Space data",
+          "description": "Connect a Dynamo automation script to project data held in Deep Space.",
+          "duration_seconds": 136,
+          "published": "2020-06-23",
+          "view_count": 132,
+          "poster": "assets/videos/twwuX2ry4ns.jpg"
+        },
+        {
+          "id": "2eLI4auYBpI",
+          "title": "How To Level Up Your Projects with Deep Space AI and DS MCP",
+          "description": "Search help guides, access project data and connect your AI environment through Deep Space MCP.",
+          "duration_seconds": 200,
+          "published": "2026-09-14",
+          "view_count": 59,
+          "poster": "assets/videos/2eLI4auYBpI.jpg"
+        }
+      ]
+    }
+  ]
+}

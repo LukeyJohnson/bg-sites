@@ -51,6 +51,7 @@ nav:
       - Resources: dynamo.md
       - Dynamo Nodes: https://dynamonodes.com/
       - DynamoBIM LinkedIn group: https://www.linkedin.com/groups/6985319/
+  - Videos: videos.md
   - Client Board: projects/client-implementation-board.md
   - PM Grid: projects/pmgrid.md
   - ProXP: projects/proxp.md
@@ -84,3 +85,11 @@ extra_css:
 
 extra_javascript:
   - javascripts/changelog.js
+  - javascripts/videos.js
+
+hooks:
+  - hooks/videos.py
+
+watch:
+  - content
+  - hooks

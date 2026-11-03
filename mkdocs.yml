@@ -31,6 +31,8 @@ theme:
 
 nav:
   - ShadowGrid: projects/shadowgrid.md
+  - Capability: capability.md
+  - DS Partner: ds-partner.md
   - Deep Space:
       - Overview: ds-pro/index.md
       - DS Pro (Technical): ds-pro/technical.md

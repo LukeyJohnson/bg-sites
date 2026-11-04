@@ -52,6 +52,10 @@ nav:
       - Dynamo Nodes: https://dynamonodes.com/
       - DynamoBIM LinkedIn group: https://www.linkedin.com/groups/6985319/
   - Videos: videos.md
+  - Podcasts:
+      - Overview: podcasts.md
+      - Podcasts I host: /podcasts/#podcasts-i-host
+      - Guest appearances: /podcasts/#guest-appearances
   - Client Board: projects/client-implementation-board.md
   - PM Grid: projects/pmgrid.md
   - ProXP: projects/proxp.md

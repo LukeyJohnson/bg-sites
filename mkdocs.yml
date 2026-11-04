@@ -56,6 +56,10 @@ nav:
       - Overview: podcasts.md
       - Podcasts I host: /podcasts/#podcasts-i-host
       - Guest appearances: /podcasts/#guest-appearances
+  - Future:
+      - Overview: future.md
+      - Original series: /future/#original-series
+      - Further perspectives: /future/#further-perspectives
   - Client Board: projects/client-implementation-board.md
   - PM Grid: projects/pmgrid.md
   - ProXP: projects/proxp.md

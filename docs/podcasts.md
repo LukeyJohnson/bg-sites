@@ -68,7 +68,7 @@ hide:
     <h2 id="guest-appearances">Guest appearances</h2>
     <p>Luke joins other hosts to talk about connected construction, BIM, AI and the realities of technology adoption.</p>
   </div>
-  <div class="bg-podcast-guests">
+  <div class="bg-podcast-guests bg-podcast-guests-three">
     <article class="bg-podcast-guest">
       <div class="bg-podcast-guest-art"><img src="../assets/podcasts/digital-construction.png" alt="Digital Construction Podcast episode artwork featuring Luke Johnson" width="1080" height="1080" loading="lazy"></div>
       <div class="bg-podcast-guest-copy">
@@ -94,6 +94,19 @@ hide:
           <a class="bg-text-link" href="https://open.spotify.com/episode/0fkEgESMIX3OMTiqocWJ31">Listen on Spotify <span aria-hidden="true">↗</span></a>
           <a class="bg-text-link" href="https://www.youtube.com/watch?v=6FAQLYG3kxg">Watch on YouTube <span aria-hidden="true">↗</span></a>
           <a href="https://e-verse.com/learn/from-dynamo-scripts-to-scalable-platforms/">Episode notes <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </article>
+    <article class="bg-podcast-guest">
+      <div class="bg-podcast-guest-art"><img src="../assets/podcasts/percolating-collaboration.jpg" alt="Percolating Collaboration episode artwork for Working While We Sleep" width="640" height="640" loading="lazy"></div>
+      <div class="bg-podcast-guest-copy">
+        <p class="bg-eyebrow">Percolating Collaboration / Revizto</p>
+        <h3>Working While We Sleep: AI’s Role in Construction’s Future</h3>
+        <p class="bg-podcast-meta">With Jason Howden · April 2025 · 33 min</p>
+        <p>Luke and Jason on the journey from BIM to Revizto and beyond: AI-assisted risk detection, simpler software stacks, and the people who shape a career in construction technology.</p>
+        <div class="bg-podcast-actions">
+          <a class="bg-text-link" href="https://open.spotify.com/episode/0DkwNprpIYxHwOqM0g2IFS">Listen on Spotify <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/posts/lukesjohnson_bim-golf-share-7320755943636377600-43Vx/">Luke’s episode introduction <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </article>

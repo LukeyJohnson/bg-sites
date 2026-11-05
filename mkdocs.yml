@@ -4,6 +4,7 @@ site_url: https://blackgrid.com.au/
 repo_url: https://github.com/lukeyjohnson/bg-sites/
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/ux/blackgrid-mark.svg
   favicon: assets/ux/blackgrid-mark.svg
   font: false
@@ -30,33 +31,43 @@ theme:
         name: Switch to dark mode
 
 nav:
-  - ShadowGrid: projects/shadowgrid.md
+  - Software:
+      - ShadowGrid: projects/shadowgrid.md
+      - Deep Space:
+          - Overview: ds-pro/index.md
+          - DS Pro (Technical): ds-pro/technical.md
+          - DS Harmony (Field): ds-pro/harmony.md
+          - DS Horizon (Ops): ds-pro/horizon.md
+          - Site and Mobile: siteapp.md
+          - DS Partner: ds-partner.md
+          - Changelog:
+              - Overview: changelog/index.md
+              - 2025: changelog/2025.md
+              - 2024: changelog/2024.md
+              - 2023: changelog/2023.md
+              - 2022: changelog/2022.md
+              - 2021: changelog/2021.md
+              - 2020: changelog/2020.md
+      - Client Board: projects/client-implementation-board.md
+      - PM Grid: projects/pmgrid.md
+      - ProXP: projects/proxp.md
+      - mytendrils: projects/mytendrils.md
+      - bg-mem: projects/bg-mem.md
+  - Community:
+      - Podcasts:
+          - Overview: podcasts.md
+          - Podcasts I host: /podcasts/#podcasts-i-host
+          - Guest appearances: /podcasts/#guest-appearances
+      - Videos: videos.md
+      - Dynamo:
+          - Resources: dynamo.md
+          - Dynamo Nodes: https://dynamonodes.com/
+          - DynamoBIM LinkedIn group: https://www.linkedin.com/groups/6985319/
+      - Future:
+          - Overview: future.md
+          - Original series: /future/#original-series
+          - Further perspectives: /future/#further-perspectives
   - Capability: capability.md
-  - DS Partner: ds-partner.md
-  - Deep Space:
-      - Overview: ds-pro/index.md
-      - DS Pro (Technical): ds-pro/technical.md
-      - DS Harmony (Field): ds-pro/harmony.md
-      - DS Horizon (Ops): ds-pro/horizon.md
-      - Site and Mobile: siteapp.md
-      - Changelog:
-          - Overview: changelog/index.md
-          - 2025: changelog/2025.md
-          - 2024: changelog/2024.md
-          - 2023: changelog/2023.md
-          - 2022: changelog/2022.md
-          - 2021: changelog/2021.md
-          - 2020: changelog/2020.md
-  - Dynamo:
-      - Resources: dynamo.md
-      - Dynamo Nodes: https://dynamonodes.com/
-      - DynamoBIM LinkedIn group: https://www.linkedin.com/groups/6985319/
-  - Videos: videos.md
-  - Client Board: projects/client-implementation-board.md
-  - PM Grid: projects/pmgrid.md
-  - ProXP: projects/proxp.md
-  - mytendrils: projects/mytendrils.md
-  - bg-mem: projects/bg-mem.md
   - What Revit Wants: https://wrw.is/
 
 not_in_nav: |
@@ -86,6 +97,7 @@ extra_css:
 extra_javascript:
   - javascripts/changelog.js
   - javascripts/videos.js
+  - javascripts/navigation.js
 
 hooks:
   - hooks/videos.py

@@ -1,0 +1,38 @@
+{# Both desktop dropdowns and the mobile drawer use the MkDocs navigation tree. #}
+{% macro links(items) %}
+  <ul class="bg-nav-links">
+    {% for entry in items %}
+      <li>
+        {% if entry.children %}
+          <details class="bg-nav-subsection"{% if entry.active %} open{% endif %}>
+            <summary>{{ entry.title | e }}</summary>
+            {{ links(entry.children) }}
+          </details>
+        {% else %}
+          <a href="{{ entry.url | url | e }}"{% if entry.active %} aria-current="page"{% endif %}>{{ entry.title | e }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+<nav class="md-tabs bg-top-nav" aria-label="Main navigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      {% for entry in nav.items %}
+        <li class="md-tabs__item{% if entry.active %} md-tabs__item--active{% endif %}">
+          {% if entry.children %}
+            <details class="bg-nav-dropdown" data-bg-dropdown>
+              <summary class="md-tabs__link bg-nav-trigger">{{ entry.title | e }}</summary>
+              <div class="bg-nav-panel">
+                <p class="bg-nav-panel-title">{{ entry.title | e }}</p>
+                {{ links(entry.children) }}
+              </div>
+            </details>
+          {% else %}
+            <a class="md-tabs__link" href="{{ entry.url | url | e }}"{% if entry.active %} aria-current="page"{% endif %}>{{ entry.title | e }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -37,7 +37,7 @@ hide:
     <p class="bg-eyebrow">01 / In the spotlight</p>
     <h2 id="shadowgrid-feature">Your workflow.<br>On the ribbon.</h2>
     <p class="bg-product-name">ShadowGrid <span>for Autodesk Revit</span></p>
-    <p>Less time repeating yourself. Run purpose-built automation from a dedicated Revit tab, with script packs that grow alongside your team's work.</p>
+    <p>Bring your AI-generated Python tools into Revit. Run, refine and rerun them from one ribbon while your project stays open.</p>
     <a class="bg-text-link" href="projects/shadowgrid/">Meet ShadowGrid <span aria-hidden="true">↗</span></a>
   </div>
   <div class="bg-feature-panel">
@@ -47,7 +47,7 @@ hide:
       <li><span>02</span><div><strong>Tag &amp; check</strong><p>Apply the rules. Find what needs attention.</p></div><span aria-hidden="true">↗</span></li>
       <li><span>03</span><div><strong>Clean &amp; repeat</strong><p>Turn recurring model work into repeatable tools.</p></div><span aria-hidden="true">↗</span></li>
     </ol>
-    <div class="bg-panel-footnote"><span>REVIT 2023—2025</span><span>NO ADMIN RIGHTS NEEDED</span></div>
+    <div class="bg-panel-footnote"><span>REVIT 2023—2026</span><span>PYTHON INCLUDED</span></div>
   </div>
 </section>
 

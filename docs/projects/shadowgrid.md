@@ -39,10 +39,15 @@ ShadowGrid is a paid execution environment for your own tools. It bundles modern
 
     **A$249 AUD excluding GST.** If 10% GST applies, the total is **A$273.90**. Your final total is shown before payment. Includes perpetual local use of the purchased v1 framework, two registered devices for one named user, and 12 months of framework updates. Your AI subscription is separate.
 
-    <div data-shadowgrid-beta hidden><label for="shadowgrid-beta-code">Beta invitation code</label><br><input id="shadowgrid-beta-code" data-shadowgrid-beta-code type="text" autocomplete="off" maxlength="80" spellcheck="false"></div>
-    <button class="md-button md-button--primary" type="button" data-shadowgrid-buy disabled>Checking availability…</button>
-    <p data-shadowgrid-status role="status" aria-live="polite"></p>
+</div>
 
+<div class="shadowgrid-checkout">
+<div data-shadowgrid-beta hidden>
+<label for="shadowgrid-beta-code">Beta invitation code</label><br>
+<input id="shadowgrid-beta-code" data-shadowgrid-beta-code type="text" autocomplete="off" maxlength="80" spellcheck="false">
+</div>
+<button class="md-button md-button--primary" type="button" data-shadowgrid-buy disabled>Checking availability…</button>
+<p data-shadowgrid-status role="status" aria-live="polite"></p>
 </div>
 
 ## A useful tool, in a few steps

@@ -1,59 +1,80 @@
 ---
-title: ShadowGrid
+title: ShadowGrid for Revit
+description: Bring your own AI. Build Python tools, run them in Revit and keep improving them without restarting your session.
 ---
 
 <div class="bg-page-intro" markdown>
+<p class="bg-eyebrow">Black Grid / ShadowGrid</p>
 
-<p class="bg-eyebrow">Black Grid / Revit automation</p>
+# Your next Revit tool.<br>Built while you work.
 
-# ShadowGrid
-
-<p class="bg-lead">A Black Grid add-in for Autodesk Revit that runs Black Grid automation script packs from a dedicated ribbon tab.</p>
-
+<p class="bg-lead">Bring your own AI. Turn a repetitive task into a Python tool, run it inside Revit, then revise and run it again without restarting your session.</p>
 </div>
 
-ShadowGrid adds a **ShadowGrid** tab to the Revit ribbon. From it you run automation scripts supplied by Black Grid as *script packs* — repeatable model clean-ups, tagging, audits and other jobs that would otherwise be done by hand. It ships with its own embedded Python runtime, so nothing else needs to be installed on the machine.
+ShadowGrid is a paid execution environment for your own tools. It bundles modern Python, connects scripts to the open Revit session, and provides a dedicated ribbon for running them. Use the AI assistant you already prefer to help write your scripts. No AI credits are required to run a saved local tool.
 
-| | |
-|---|---|
-| **Revit** | 2023, 2024, 2025 — one installer covers every supported year on the machine |
-| **Windows** | Windows 10 / 11 (64-bit) |
-| **Rights needed** | None — installs per user, no administrator or UAC prompt |
-| **Signing** | Signed with Black Grid's own code-signing certificate; a one-time trust package removes Revit's "publisher could not be verified" prompt |
-
-<div class="bg-spec-strip" aria-label="ShadowGrid at a glance">
-  <div><strong>One ribbon tab</strong><span>Automation where you already work</span></div>
-  <div><strong>One installer</strong><span>Revit 2023, 2024 and 2025</span></div>
-  <div><strong>Your next script pack</strong><span>New tools without reinstalling the add-in</span></div>
+<div class="bg-spec-strip" aria-label="ShadowGrid capabilities">
+<div><strong>Build. Run. Refine.</strong><span>Keep your Revit session open.</span></div>
+<div><strong>Your tools stay yours.</strong><span>Ordinary Python files on your PC.</span></div>
+<div><strong>Framework updates included.</strong><span>Check and install from the add-in.</span></div>
 </div>
 
-## A closer look
+## Get started
 
-<div class="grid cards bg-capabilities" markdown>
+**Private beta acceptance is underway.** General paid sales are closed while fresh installation and framework upgrades are checked. Invited testers can use their private code below; the founding price describes the planned paid offer.
 
--   :material-filter-variant:{ .lg .middle } __Select with intent__
+<div class="grid cards" markdown>
+
+-   __Try ShadowGrid__
 
     ---
 
-    Filter the elements you need before the next modelling step. Keep repetitive selection work out of your way.
+    **14 days to try the workflow.** Install the add-in, open Account / Updates and start your trial. Initial activation needs an internet connection.
 
--   :material-tag-check-outline:{ .lg .middle } __Tag and check__
+    [Read the installation guide](shadowgrid/install.md){ .md-button }
 
-    ---
-
-    Run consistent tagging and QA routines. Spend your attention on the elements that need it.
-
--   :material-package-variant-closed:{ .lg .middle } __Keep your tools growing__
+-   __Founding Revit licence__
 
     ---
 
-    Add purpose-built script packs as your workflows evolve. Refresh the list and keep working.
+    **A$249 AUD excluding GST.** If 10% GST applies, the total is **A$273.90**. Your final total is shown before payment. Includes perpetual local use of the purchased v1 framework, two registered devices for one named user, and 12 months of framework updates. Your AI subscription is separate.
+
+    <div data-shadowgrid-beta hidden><label for="shadowgrid-beta-code">Beta invitation code</label><br><input id="shadowgrid-beta-code" data-shadowgrid-beta-code type="text" autocomplete="off" maxlength="80" spellcheck="false"></div>
+    <button class="md-button md-button--primary" type="button" data-shadowgrid-buy disabled>Checking availability…</button>
+    <p data-shadowgrid-status role="status" aria-live="polite"></p>
 
 </div>
 
-## How it is delivered
+## A useful tool, in a few steps
 
-Clients receive a trust package, the add-in installer and a checksums file so they can verify what they received before installing. Script packs are installed separately and can be updated without reinstalling the add-in.
+1. Install ShadowGrid and start your trial or activate your licence.
+2. Open **Build with your AI**, select your Revit year and copy the script design guide into your AI chat.
+3. Describe a task. Review the resulting script and save it in the folder opened by **Open Folder**.
+4. Use **Refresh List**, select the tool and Run. Revise, save and run it again.
 
-!!! info "Availability"
-    ShadowGrid is delivered directly to Black Grid clients. Install guides and script-pack documentation are provided with each release.
+An optional local MCP connection lets a compatible Windows AI client retrieve the design rules automatically. It supplies guidance on script shape; your AI authors the script. Marketplace tools are a separate future capability.
+
+Python is included; you do not need to install it separately. Bring existing scripts across after checking their dependencies and Revit API compatibility. Dynamo graphs and other add-ins are not automatically converted.
+
+## What v1 includes
+
+| Included | Details |
+| --- | --- |
+| Local execution | A dedicated ribbon, script selection, Run, Open Folder and Refresh List |
+| Licence and trial | Signed activation, a 14-day trial and local cached execution rights |
+| Framework updates | Signed release checks, verified downloads and installation after Revit closes |
+| Personal tool files | Stored outside installer files so framework upgrades retain your work |
+| Verification examples | A hello-world tool and runtime environment check |
+| AI design guidance | Revit year-specific rules, a copy-ready starter prompt and an optional local guidance MCP |
+
+Company cloud libraries, a creator marketplace, additional applications and hosted ShadowGrid AI are future work. They are not included promises in this purchase.
+
+## Compatibility and purchase details
+
+The installer contains builds for **Revit 2023, 2024, 2025 and 2026** on 64-bit Windows. Individual scripts can need changes between Revit versions. **Revit LT does not support add-ins.** See the installation guide for tested release details and prerequisites.
+
+Black Grid's current signing certificate requires a **one-time trust setup per Windows user**, or deployment by your IT administrator. Routine signed framework updates reuse that publisher identity. Windows or company security policy can still require IT assistance.
+
+Run scripts whose behaviour you understand and trust. ShadowGrid runs local Python with access to your session and computer; it is not a sandbox. Keep model backups and test new automation on a suitable copy.
+
+[Installation and updates](shadowgrid/install.md) · [Licence and refunds](shadowgrid/licence.md) · [Privacy](shadowgrid/privacy.md)

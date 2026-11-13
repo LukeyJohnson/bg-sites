@@ -101,6 +101,7 @@ extra_javascript:
   - javascripts/changelog.js
   - javascripts/videos.js
   - javascripts/navigation.js
+  - javascripts/shadowgrid.js
 
 hooks:
   - hooks/videos.py

@@ -6,19 +6,35 @@ title: Install and update ShadowGrid
 
 You need 64-bit Windows, a supported full Revit installation, internet access for initial activation, and permission under your organisation's software policy.
 
-**Beta validation:** the 1.0.0 package contains builds for Revit 2023–2026. Protected startup, cloud activation and same-session Python iteration have passed in Revit 2024.1. Fresh MSI installation and an OTA upgrade are awaiting second-machine acceptance. Other Revit years have passed build/signature and relevant runtime checks; native testing in those hosts remains pending.
-
-<p><a class="md-button md-button--primary" data-shadowgrid-download href="../">Checking the current release…</a></p>
-<p data-shadowgrid-status role="status" aria-live="polite"></p>
+**Beta validation:** the packages contain Revit 2023–2026 builds. Protected startup, cloud activation and same-session Python iteration have passed in Revit 2024.1. The owner has completed checkout, download and MSI installation on a second machine; publisher trust, first-run activation and an OTA upgrade still need acceptance. Other Revit years have passed build/signature and relevant runtime checks; native testing in those hosts remains pending.
 
 ## First installation
 
-1. Save your work and close Revit before installing or upgrading the framework.
-2. Download the **MSI**, **Black Grid trust package** and **SHA256SUMS.txt** from the official release page.
-3. Verify the publisher before importing the certificate: **Black Grid**, thumbprint `D9BA84607BF9EE8F3DDC673F0C61B08F13D91F46`. Your IT team can deploy the public certificate centrally. The trust package imports it for your Windows user; this is a one-time setup for this publisher.
-4. Run the MSI for your Windows user. It installs the Revit-specific payloads together.
-5. Open Revit. Choose **ShadowGrid → Account / Updates** and either start a trial or paste your purchased licence key.
-6. Choose **Open Folder** to find your personal tools. Run the included hello-world example against a suitable open project.
+### A. Set up Windows trust once
+
+**Trust setup is a separate download. It is not integrated into the MSI.** If you already ran the MSI, complete this step and reopen Revit; your installation can stay in place.
+
+<p><a class="md-button md-button--primary" data-shadowgrid-trust href="https://github.com/LukeyJohnson/bg-sites/releases/download/shadowgrid-v1.0.1-beta.1/ShadowGrid-TrustSetup.zip">Download one-time trust package (.zip)</a></p>
+
+1. Right-click the ZIP and choose **Extract All**. Open the extracted folder.
+2. Check the publisher: **Black Grid**, thumbprint `D9BA84607BF9EE8F3DDC673F0C61B08F13D91F46`{ .shadowgrid-thumbprint }. The package contains the public certificate and setup helpers.
+3. Double-click **`Install-ShadowGridTrust.cmd`** and review any Windows certificate prompt. Wait for **SUCCESS**.
+
+The helper adds trust for your Windows user. If company policy blocks it, ask IT to deploy the public certificate to Trusted Root Certification Authorities and Trusted Publishers under your organisation's policy. Routine framework updates reuse this publisher.
+
+### B. Install the add-in
+
+Save your work and close Revit. Download and run the MSI for your Windows user. It installs the supported Revit payloads and bundled Python together.
+
+<p><a class="md-button md-button--primary" data-shadowgrid-download>Checking the current installer…</a></p>
+<p data-shadowgrid-status role="status" aria-live="polite"></p>
+<p><a data-shadowgrid-checksums href="https://github.com/LukeyJohnson/bg-sites/releases/download/shadowgrid-v1.0.1-beta.1/SHA256SUMS.txt">Download SHA-256 checksums</a> · <a href="https://github.com/LukeyJohnson/bg-sites/releases" target="_blank" rel="noopener noreferrer">Official release files</a></p>
+
+### C. Activate and check the first run
+
+Open Revit and choose **ShadowGrid → Account / Updates**. Paste the key saved after checkout and choose **Activate**, or start the 14-day trial and review/accept its agreement. Paid Checkout already records the purchase agreement; starting another trial is unnecessary for a purchased key.
+
+Open a suitable test project, choose **Open Folder** and run the included hello-world example. If the ribbon is missing or Revit reports an unverified publisher, finish the trust step above for the same Windows user, then close and reopen Revit. Contact [luke@blackgrid.com.au](mailto:luke@blackgrid.com.au) with your Revit/ShadowGrid versions and the exact message if the issue remains.
 
 Your licence key is confidential. Store the key you receive after checkout. If you need help recovering a purchase, contact Black Grid with the payment receipt; do not publish your key or model files.
 

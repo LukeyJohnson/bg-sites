@@ -23,6 +23,8 @@ ShadowGrid is a paid execution environment for your own tools. It bundles modern
 
 **Private beta acceptance is underway.** General paid sales are closed while fresh installation and framework upgrades are checked. Invited testers can use their private code below; the founding price describes the planned paid offer.
 
+After checkout: **save your licence key → run the separate one-time Windows trust setup → install → activate in Revit**. You need 64-bit Windows and full Revit 2023–2026. Your purchase confirmation provides both downloads and the setup steps.
+
 <div class="grid cards" markdown>
 
 -   __Try ShadowGrid__
@@ -45,10 +47,14 @@ ShadowGrid is a paid execution environment for your own tools. It bundles modern
 <div data-shadowgrid-beta hidden>
 <label for="shadowgrid-beta-code">Beta invitation code</label><br>
 <input id="shadowgrid-beta-code" data-shadowgrid-beta-code type="text" autocomplete="off" maxlength="80" spellcheck="false">
+<p class="shadowgrid-note">Enter your invitation here before opening Stripe. An approved beta invitation reduces the order to A$0; check the total before completing it.</p>
 </div>
+
 <button class="md-button md-button--primary" type="button" data-shadowgrid-buy disabled>Checking availability…</button>
 <p data-shadowgrid-status role="status" aria-live="polite"></p>
 </div>
+
+[Founding licence terms](shadowgrid/licence.md) · [Privacy](shadowgrid/privacy.md) · [Installation and one-time trust setup](shadowgrid/install.md)
 
 ## A useful tool, in a few steps
 

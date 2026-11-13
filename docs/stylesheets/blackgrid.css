@@ -575,3 +575,13 @@ body { -webkit-font-smoothing: antialiased; }
 .bg-nav-subsection > .bg-nav-links { margin: 2px 0 10px 14px; padding-left: 10px; border-left: 1px solid var(--bg-border); }
 .bg-nav-subsection > .bg-nav-links a, .bg-nav-subsection > .bg-nav-links summary { font-size: 13px; }
 @media print { .bg-top-nav { display: none; } }
+
+/* ShadowGrid checkout and first-run setup. */
+.shadowgrid-checkout { margin: 1.25rem 0; }
+.shadowgrid-checkout input { display: block; width: min(100%, 26rem); padding: .65rem .8rem; margin: .5rem 0 .85rem; border: 1px solid var(--bg-border); border-radius: 6px; background: var(--md-code-bg-color); color: var(--md-default-fg-color); font: inherit; }
+.shadowgrid-checkout input:focus-visible { outline: 2px solid var(--bg-accent); outline-offset: 2px; }
+.md-typeset .shadowgrid-note { color: var(--bg-muted); font-size: .78rem; }
+.md-typeset [data-shadowgrid-key] { overflow-wrap: anywhere; white-space: pre-wrap; }
+.md-typeset [aria-disabled="true"] { opacity: .65; pointer-events: none; }
+
+.md-typeset .shadowgrid-thumbprint { white-space: normal; overflow-wrap: anywhere; }

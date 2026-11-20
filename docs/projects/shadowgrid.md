@@ -21,7 +21,7 @@ ShadowGrid is a paid execution environment for your own tools. It bundles modern
 
 ## Get started
 
-**Private beta acceptance is underway.** General paid sales are closed while fresh installation and framework upgrades are checked. Invited testers can use their private code below; the founding price describes the planned paid offer.
+**Founding licences are available.** Buy below, or start with the 14-day trial. No invitation is needed to purchase.
 
 After checkout: **save your licence key → run the separate one-time Windows trust setup → install → activate in Revit**. You need 64-bit Windows and full Revit 2023–2026. Your purchase confirmation provides both downloads and the setup steps.
 

@@ -19,7 +19,7 @@ title: Your ShadowGrid purchase
 
 **The trust package is separate from the MSI.** Download it on your first Windows installation. Routine ShadowGrid updates use the same publisher and do not repeat this step.
 
-<p><a class="md-button md-button--primary" data-shadowgrid-trust href="https://github.com/LukeyJohnson/bg-sites/releases/download/shadowgrid-v1.0.1-beta.1/ShadowGrid-TrustSetup.zip">Download trust package (.zip)</a></p>
+<p><a class="md-button md-button--primary" data-shadowgrid-trust href="https://github.com/LukeyJohnson/bg-sites/releases/download/shadowgrid-v1.0.2-beta.1/ShadowGrid-TrustSetup.zip">Download trust package (.zip)</a></p>
 
 1. Right-click the downloaded ZIP and choose **Extract All**.
 2. Open the extracted folder and double-click **`Install-ShadowGridTrust.cmd`**.
@@ -34,7 +34,7 @@ Save your work and close Revit. Download and run the MSI for your Windows user. 
 
 <p><a class="md-button md-button--primary" data-shadowgrid-download>Checking the current installer…</a></p>
 <p data-shadowgrid-status role="status" aria-live="polite"></p>
-<p><a data-shadowgrid-checksums href="https://github.com/LukeyJohnson/bg-sites/releases/download/shadowgrid-v1.0.1-beta.1/SHA256SUMS.txt">Download SHA-256 checksums</a> · <a href="https://github.com/LukeyJohnson/bg-sites/releases" target="_blank" rel="noopener noreferrer">Official release files</a></p>
+<p><a data-shadowgrid-checksums href="https://github.com/LukeyJohnson/bg-sites/releases/download/shadowgrid-v1.0.2-beta.1/SHA256SUMS.txt">Download SHA-256 checksums</a> · <a href="https://github.com/LukeyJohnson/bg-sites/releases" target="_blank" rel="noopener noreferrer">Official release files</a></p>
 
 ## 4. Activate in Revit
 
@@ -44,9 +44,9 @@ Open your supported full Revit version, choose **ShadowGrid → Account / Update
 
 Choose **Build with your AI**, select your Revit year and **Copy design guide**. Paste the guide into your AI chat and describe a small task. Review the generated `.py` file, save it using **Open Folder**, then refresh and run it. You can revise and rerun without restarting Revit.
 
-The optional MCP retrieves design rules for your AI. Copying the guide is enough to get started.
+Continue with the **[Get started with ShadowGrid guide](install.md)** for the included example, a copy-ready first-task prompt, exact save/run/revise steps, optional Claude/Codex MCP configuration and troubleshooting. Copying the guide is enough to start with an ordinary AI chat.
 
-[Full installation, activation and update guide](install.md){ .md-button }
+[Get started: setup, MCP and your first script](install.md){ .md-button }
 
 <section aria-labelledby="shadowgrid-stay-connected">
 <h2 id="shadowgrid-stay-connected">Keep building with us</h2>

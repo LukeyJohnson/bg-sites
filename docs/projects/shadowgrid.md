@@ -33,7 +33,7 @@ After checkout: **save your licence key → run the separate one-time Windows tr
 
     **14 days to try the workflow.** Install the add-in, open Account / Updates and start your trial. Initial activation needs an internet connection.
 
-    [Read the installation guide](shadowgrid/install.md){ .md-button }
+    [Get started: setup and your first script](shadowgrid/install.md){ .md-button }
 
 -   __Founding Revit licence__
 
@@ -64,6 +64,8 @@ After checkout: **save your licence key → run the separate one-time Windows tr
 4. Use **Refresh List**, select the tool and Run. Revise, save and run it again.
 
 An optional local MCP connection lets a compatible Windows AI client retrieve the design rules automatically. It supplies guidance on script shape; your AI authors the script. Marketplace tools are a separate future capability.
+
+[Get started with ShadowGrid](shadowgrid/install.md){ .md-button } — downloads, activation, Claude/Codex MCP setup and a complete first-script walkthrough.
 
 Python is included; you do not need to install it separately. Bring existing scripts across after checking their dependencies and Revit API compatibility. Dynamo graphs and other add-ins are not automatically converted.
 

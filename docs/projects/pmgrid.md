@@ -12,6 +12,8 @@ title: PM Grid
 
 </div>
 
+**Meet the MCP-powered extension:** [PulseGrid](pulsegrid.md) builds on the original PMGrid with a shared project board, task discussion and personal Codex or Claude connections. The original PMGrid remains available below.
+
 [Open PM Grid :material-open-in-new:](https://pmgrid.blackgrid.com.au/){ .md-button .md-button--primary }
 
 PM Grid is built for people who run many projects at once and want to move between projects, events and tasks without losing context.

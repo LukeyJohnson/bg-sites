@@ -1,0 +1,32 @@
+/* Keep the PulseGrid introduction within the established Black Grid product style. */
+.md-typeset .bg-pulsegrid .bg-eyebrow,
+.md-typeset .bg-pulsegrid .bg-spec-strip span,
+.md-typeset .bg-pulsegrid .bg-screenshot figcaption {
+  font-size: .7rem;
+}
+.md-typeset .bg-pulsegrid .md-button {
+  font-size: .8rem;
+  min-height: 44px;
+  margin: .25rem .4rem .25rem 0;
+}
+.md-typeset .bg-pulsegrid table:not([class]) {
+  font-size: .8rem;
+}
+.bg-pulsegrid .bg-spec-strip strong {
+  line-height: 1.4;
+  margin-bottom: .25rem;
+}
+.bg-pulsegrid .bg-screenshot {
+  margin-inline: 0;
+}
+.bg-pulsegrid .bg-screenshot a:focus-visible {
+  display: block;
+  outline-offset: -3px;
+}
+@media (max-width: 560px) {
+  .md-typeset .bg-pulsegrid .md-button {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+  }
+}

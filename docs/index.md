@@ -69,6 +69,11 @@ hide:
       <p class="bg-card-category">Client collaboration</p><h3>Client Implementation Board</h3><p>A clear, secure view of the work moving your implementation forward.</p>
       <span class="bg-card-link">See how it works <span aria-hidden="true">→</span></span>
     </a>
+    <a class="bg-product-card" href="projects/pulsegrid/">
+      <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">PG</span></div>
+      <p class="bg-card-category">People, projects and AI</p><h3>PulseGrid</h3><p>The MCP-powered extension to PMGrid. A shared board for your team, clients and personally connected AI agents.</p>
+      <span class="bg-card-link">Explore PulseGrid</span>
+    </a>
     <a class="bg-product-card" href="projects/pmgrid/">
       <div class="bg-card-top"><span class="bg-card-icon" aria-hidden="true">PM</span><span class="bg-card-arrow" aria-hidden="true">↗</span></div>
       <p class="bg-card-category">AI-assisted project management</p><h3>PM Grid</h3><p>Projects, tasks and context, connected in a workspace built for the way you think.</p>

@@ -33,6 +33,7 @@ theme:
 nav:
   - Software:
       - ShadowGrid: projects/shadowgrid.md
+      - PulseGrid: projects/pulsegrid.md
       - Bakery for Dynamo: projects/bakery-for-dynamo.md
       - Deep Space:
           - Overview: ds-pro/index.md
@@ -50,7 +51,7 @@ nav:
               - 2021: changelog/2021.md
               - 2020: changelog/2020.md
       - Client Board: projects/client-implementation-board.md
-      - PM Grid: projects/pmgrid.md
+      - PMGrid (original): projects/pmgrid.md
       - ProXP: projects/proxp.md
       - mytendrils: projects/mytendrils.md
       - bg-mem: projects/bg-mem.md
@@ -96,6 +97,7 @@ extra_css:
   - stylesheets/blackgrid.css
   - stylesheets/changelog.css
   - stylesheets/bakery.css
+  - stylesheets/pulsegrid.css
 
 extra_javascript:
   - javascripts/changelog.js

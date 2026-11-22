@@ -4,6 +4,8 @@ title: ShadowGrid privacy
 
 # ShadowGrid privacy notice
 
+For website measurement and your browser's optional analytics choice, see [Privacy and analytics](../../privacy.md). Website tracking is separate from desktop licence and update requests.
+
 Black Grid is operated by The Trustee for L & T JOHNSON FAMILY TRUST, ABN 79 257 336 947. Contact: luke@blackgrid.com.au. Prepared 13 November 2026.
 
 ShadowGrid's cloud connection supports licence activation, device allowances, trial eligibility, payment fulfilment and framework updates. It processes opaque installation identifiers, licence/payment references, request information and device registrations needed for those services. Trial and activation rate limits use request IP information. Agreement records identify the version/hash and the time the service observed an acceptance assertion or verified Stripe consent; they do not claim to record when a person actually read every term.

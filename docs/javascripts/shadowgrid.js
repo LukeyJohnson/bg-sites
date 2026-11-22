@@ -28,8 +28,10 @@
         if (buy.dataset.beta === 'true' && !betaCode) { setStatus('Enter your beta invitation code first.'); buy.disabled = false; return; }
         const result = await post('/v1/checkout', betaCode ? { betaCode } : {});
         const target = new URL(result.url); if (target.origin !== 'https://checkout.stripe.com') throw new Error();
+        if (buy.dataset.beta !== 'true') window.bgAnalytics?.checkoutStarted();
         window.location.assign(target.href);
       } catch {
+        if (buy.dataset.beta !== 'true') window.bgAnalytics?.checkoutFailed();
         buy.disabled = false;
         setStatus(buy.dataset.beta === 'true' ? 'The invitation could not be redeemed. It may have expired or already been used. If you completed checkout, recover your existing key with your receipt via luke@blackgrid.com.au.' : 'Checkout could not open. Retry or contact luke@blackgrid.com.au. If you already completed an order, use your receipt to recover it.');
       }
@@ -79,6 +81,15 @@
         document.querySelector('[data-shadowgrid-key]').textContent = data.licenseKey;
         const summary = document.querySelector('[data-shadowgrid-order-summary]');
         const order = data.orderSummary;
+        // Count only server-verified paid orders. No licence key or raw Checkout
+        // reference reaches Analytics. Stable hashed IDs deduplicate reloads.
+        // Revenue is deliberately omitted: the response does not itemise tax.
+        if (data.qaOrder === false && order?.amountTotal > 0 && order.currency === 'aud') {
+          crypto.subtle.digest('SHA-256', new TextEncoder().encode(sessionId)).then(bytes => {
+            const reference = 'sg_' + Array.from(new Uint8Array(bytes)).map(x => x.toString(16).padStart(2, '0')).join('').slice(0, 32);
+            window.bgAnalytics?.purchase(reference);
+          }).catch(() => {});
+        }
         if (summary && order) {
           const amount = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' }).format(order.amountTotal / 100);
           const updates = new Intl.DateTimeFormat('en-AU', { dateStyle: 'long' }).format(new Date(order.updatesUntil));

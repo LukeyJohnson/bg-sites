@@ -28,6 +28,7 @@ const events = (b, name) => b.commands().filter(x => x[0] === 'event' && x[1] ==
 const main = browser();
 assert.equal(main.scripts.length, 1);
 assert.equal(events(main, 'page_view').length, 1);
+assert.equal(main.commands().filter(x => x[0] === 'config').length, 1, 'configure once on document load');
 assert.equal(main.context.window.bgAnalytics.pageView(), false);
 vm.runInContext(source, main.context);
 assert.equal(main.scripts.length, 1);
@@ -56,6 +57,7 @@ for (const host of ['pmgrid', 'mytendrils', 'proxp']) {
   b.context.location.href = `https://${host}.blackgrid.com.au/projects/ANOTHER_PRIVATE_ID/edit`;
   b.context.window.bgAnalytics.pageView();
   assert.equal(events(b, 'page_view').length, 2);
+  assert.equal(b.commands().filter(x => x[0] === 'config').at(-1)[2].update, true, 'route context updates must not reinitialise measurement');
   assert.ok(!JSON.stringify(b.commands()).includes('ANOTHER_PRIVATE_ID'));
 }
 const campaign = browser('https://blackgrid.com.au/?utm_source=linkedin&utm_medium=social&utm_campaign=shadowgrid-launch&session_id=cs_live_SECRET&email=someone@example.com#SECRET');

@@ -87,10 +87,11 @@
     const key = location.origin + location.pathname;
     if (lastPage === key) return false;
     lastPage = key;
+    const first = !started;
     if (!start()) return false;
     const page = context();
     if (lastLocation) page.page_referrer = lastLocation;
-    window.gtag('config', id, { ...page, send_page_view: false });
+    if (!first) window.gtag('config', id, { ...page, update: true, send_page_view: false });
     event('page_view', page);
     lastLocation = page.page_location;
     if (location.hostname === 'blackgrid.com.au' && location.pathname === '/projects/shadowgrid/') {

@@ -33,7 +33,7 @@ After checkout: **save your licence key → run the separate one-time Windows tr
 
     **14 days to try the workflow.** Install the add-in, open Account / Updates and start your trial. Initial activation needs an internet connection.
 
-    [Get started: setup and your first script](shadowgrid/install.md){ .md-button }
+    [Get started: setup and your first script](shadowgrid/install.md){ .md-button data-bg-trial-guide="" }
 
 -   __Founding Revit licence__
 

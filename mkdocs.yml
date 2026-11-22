@@ -100,6 +100,7 @@ extra_css:
   - stylesheets/pulsegrid.css
 
 extra_javascript:
+  - javascripts/analytics.js
   - javascripts/changelog.js
   - javascripts/videos.js
   - javascripts/navigation.js

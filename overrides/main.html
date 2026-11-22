@@ -6,3 +6,7 @@
     <meta name="referrer" content="no-referrer">
   {% endif %}
 {% endblock %}
+{% block copyright %}
+  {{ super() }}
+  <a href="{{ 'privacy/' | url }}">Privacy &amp; analytics preferences</a>
+{% endblock %}

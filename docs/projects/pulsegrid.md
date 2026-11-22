@@ -12,14 +12,14 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 
 <p class="bg-lead">The MCP-powered extension to the original PMGrid. One shared board for your team, clients and the AI assistants you already use.</p>
 
-[Explore the sample board](https://pulsegrid-staging-7ps5dsadra-uc.a.run.app/preview){ .md-button .md-button--primary }
-[Try early access](https://pulsegrid-staging-7ps5dsadra-uc.a.run.app/){ .md-button }
+[Explore the sample board](https://pulse.blackgrid.com.au/preview){ .md-button .md-button--primary }
+[Open PulseGrid](https://pulse.blackgrid.com.au/){ .md-button }
 </div>
 
 **PulseGrid builds on PMGrid’s projects, tasks, events and modular DataBlocks.** It adds a shared browser board, task discussion and personal AI connections through the **Model Context Protocol (MCP)**. Connect your own Codex or Claude client, choose its projects and permissions, and work with the same tasks and context your team sees.
 
 !!! info "Early access"
-    The current app is a staging environment for testing. Use a test project while production release is prepared. Live subscriptions are not open yet.
+    Open PulseGrid at **pulse.blackgrid.com.au**, sign in with Google and activate the launch trial to collaborate. Live subscriptions are not open yet.
 
 <div class="bg-spec-strip" aria-label="PulseGrid capabilities">
 <div><strong>One shared board.</strong><span>People, clients and agents see the work.</span></div>
@@ -28,7 +28,7 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 </div>
 
 <figure class="bg-screenshot">
-<a href="https://pulsegrid-staging-7ps5dsadra-uc.a.run.app/preview" aria-label="Explore the interactive PulseGrid sample board">
+<a href="https://pulse.blackgrid.com.au/preview" aria-label="Explore the interactive PulseGrid sample board">
 <img src="../../assets/ux/pulsegrid-board.webp" alt="PulseGrid sample project board showing open, in-progress, blocked and closed tasks with permanent task numbers." width="1440" height="1000" loading="lazy" decoding="async">
 </a>
 <figcaption>Illustrative sample project. Explore the board without signing in; sample edits stay in your browser tab.</figcaption>
@@ -41,8 +41,8 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 3. **Give the work some structure.** Ask your assistant to turn an email, brief or meeting transcript into tasks with completion criteria and linked source material. Review what it creates on the board.
 4. **Work together.** Update tasks in the browser or through your agent. Attach DataBlocks, discuss the work and record evidence. When something remains unfinished, carry it into a linked follow-up task.
 
-[Connect Codex or Claude](https://pulsegrid-staging-7ps5dsadra-uc.a.run.app/help/mcp){ .md-button }
-[Read the user guide](https://pulsegrid-staging-7ps5dsadra-uc.a.run.app/help/user){ .md-button }
+[Connect Codex or Claude](https://pulse.blackgrid.com.au/help/mcp){ .md-button }
+[Read the user guide](https://pulse.blackgrid.com.au/help/user){ .md-button }
 
 ## What PulseGrid adds
 
@@ -74,13 +74,13 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 
 </div>
 
-During early access, try the collaboration workflow with test data. Live paid checkout will open separately from this staging release.
+Activate the launch trial to try the collaboration workflow. Live paid checkout will open separately.
 
 ## Built on the original PMGrid
 
 PMGrid introduced the connected workspace for projects, events, tasks and modular DataBlocks. **PulseGrid is its MCP-powered extension**, adding a shared board and a way for your own AI assistants to participate in that work.
 
-The [original PMGrid](pmgrid.md) remains available. Existing PMGrid projects are not automatically moved into the early-access environment.
+The [original PMGrid](pmgrid.md) remains available. Existing PMGrid projects are not automatically moved into PulseGrid.
 
 ## A few practical questions
 
@@ -88,9 +88,13 @@ The [original PMGrid](pmgrid.md) remains available. Existing PMGrid projects are
 
 No. You can create tasks, attach context and post comments in the browser. Connect an assistant when it helps with your work.
 
+### Can I install PulseGrid as an app?
+
+Yes. Open **pulse.blackgrid.com.au** and use **Install app** when offered, or your browser’s install action. On iPhone or iPad, use Safari’s **Share → Add to Home Screen**. The installed app still needs an internet connection for current project data and permission checks.
+
 ### Which AI clients can I connect?
 
-Fresh OAuth connection setup has been tested with **Codex CLI** and **Claude Code**. See the [connection guide](https://pulsegrid-staging-7ps5dsadra-uc.a.run.app/help/mcp) for tested versions, setup and a first read/write workflow. Other hosts need their own compatibility check.
+Fresh OAuth connection setup has been tested with **Codex CLI** and **Claude Code**. See the [connection guide](https://pulse.blackgrid.com.au/help/mcp) for tested versions, setup and a first read/write workflow. Other hosts need their own compatibility check.
 
 Your AI account is separate. PulseGrid does not include a hosted agent or AI credits, and posting a comment does not automatically start an agent.
 
@@ -102,6 +106,6 @@ Everyone with access can read the whole shared project, including its discussion
 
 Permitted viewing and history remain available. Changes require renewed collaboration access. Project permissions and shared-context grants continue to apply independently.
 
-[Explore PulseGrid](https://pulsegrid-staging-7ps5dsadra-uc.a.run.app/preview){ .md-button .md-button--primary }
+[Explore PulseGrid](https://pulse.blackgrid.com.au/preview){ .md-button .md-button--primary }
 
 </div>

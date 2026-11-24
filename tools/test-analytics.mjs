@@ -46,7 +46,7 @@ for (const options of [{ navigator: { globalPrivacyControl: true } }, { navigato
   const b = browser(undefined, options); assert.equal(b.scripts.length, 0); assert.equal(b.commands().length, 0);
   assert.equal(b.context.window.bgAnalytics.checkoutStarted(), false);
 }
-for (const host of ['pmgrid', 'mytendrils', 'proxp']) {
+for (const host of ['pmgrid', 'mytendrils', 'proxp', 'pulse']) {
   const b = browser(`https://${host}.blackgrid.com.au/projects/CustomerName/edit?email=person@example.com&token=VERY_PRIVATE#licence`, {
     title: 'CustomerName confidential project', referrer: 'https://proxp.blackgrid.com.au/portfolio/PRIVATE_UID?token=BEARER'
   });

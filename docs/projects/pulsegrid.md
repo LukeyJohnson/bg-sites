@@ -19,7 +19,7 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 **PulseGrid builds on PMGrid’s projects, tasks, events and modular DataBlocks.** It adds a shared browser board, task discussion and personal AI connections through the **Model Context Protocol (MCP)**. Connect your own Codex or Claude client, choose its projects and permissions, and work with the same tasks and context your team sees.
 
 !!! info "Early access"
-    Open PulseGrid at **pulse.blackgrid.com.au**, sign in with Google and activate the launch trial to collaborate. Live subscriptions are not open yet.
+    Open PulseGrid at **pulse.blackgrid.com.au**, sign in with Google or Microsoft and activate the launch trial to collaborate. Live subscriptions are available through **Connections & account** at **A$29/month including applicable GST**.
 
 <div class="bg-spec-strip" aria-label="PulseGrid capabilities">
 <div><strong>One shared board.</strong><span>People, clients and agents see the work.</span></div>
@@ -36,7 +36,7 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 
 ## From a brief to work everyone can follow
 
-1. **Create a shared project.** Sign in with Google, activate collaboration and create a workspace and project. Grant each person viewer or collaborator access.
+1. **Create a shared project.** Sign in with Google or Microsoft, activate collaboration and create a workspace and project. Grant each person viewer or collaborator access.
 2. **Connect your own assistant.** Add PulseGrid to a compatible Codex or Claude client. Review the requested capabilities and select the projects or workspace it may use.
 3. **Give the work some structure.** Ask your assistant to turn an email, brief or meeting transcript into tasks with completion criteria and linked source material. Review what it creates on the board.
 4. **Work together.** Update tasks in the browser or through your agent. Attach DataBlocks, discuss the work and record evidence. When something remains unfinished, carry it into a linked follow-up task.
@@ -64,17 +64,17 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 
     ---
 
-    Read the tasks, discussion and shared context in projects you are granted access to. Use your own Google account. A viewer invitation does not start a collaboration trial.
+    Read the tasks, discussion and shared context in projects you are granted access to. Use your own Google or Microsoft account (personal or work/school). A viewer invitation does not start a collaboration trial.
 
 -   __One personal collaborator seat__
 
     ---
 
-    **Launch offer: A$29 AUD per month.** One seat follows you across your permitted workspaces. A **one-calendar-month free trial** is available for activation from **1 November through 31 December 2026**, Brisbane time. An existing trial keeps its original end date.
+    **Launch offer: A$29 AUD per month including applicable GST.** One seat follows you across your permitted workspaces. A **one-calendar-month free trial** is available for activation from **1 November through 31 December 2026**, Brisbane time. An existing trial keeps its original end date.
 
 </div>
 
-Activate the launch trial to try the collaboration workflow. Live paid checkout will open separately.
+Activate the launch trial to try the collaboration workflow. In **Connections & account**, choose **Subscribe after my trial** to review live Stripe checkout while keeping your existing trial end. Use **Manage subscription** for billing details, invoices and cancellation.
 
 ## Built on the original PMGrid
 

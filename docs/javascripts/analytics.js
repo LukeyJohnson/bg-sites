@@ -7,12 +7,13 @@
     'blackgrid.com.au': 'Black Grid',
     'wrw.blackgrid.com.au': 'What Revit Wants',
     'pmgrid.blackgrid.com.au': 'PMGrid',
+    'pulse.blackgrid.com.au': 'PulseGrid',
     'proxp.blackgrid.com.au': 'ProXP',
     'mytendrils.blackgrid.com.au': 'MyTendrils'
   };
   const site = sites[location.hostname];
-  const privateApps = ['pmgrid.blackgrid.com.au', 'proxp.blackgrid.com.au', 'mytendrils.blackgrid.com.au'];
-  const products = { 'pmgrid.blackgrid.com.au': 'pmgrid', 'proxp.blackgrid.com.au': 'proxp', 'mytendrils.blackgrid.com.au': 'mytendrils', 'wrw.blackgrid.com.au': 'wrw' };
+  const privateApps = ['pulse.blackgrid.com.au', 'pmgrid.blackgrid.com.au', 'proxp.blackgrid.com.au', 'mytendrils.blackgrid.com.au'];
+  const products = { 'pulse.blackgrid.com.au': 'pulsegrid', 'pmgrid.blackgrid.com.au': 'pmgrid', 'proxp.blackgrid.com.au': 'proxp', 'mytendrils.blackgrid.com.au': 'mytendrils', 'wrw.blackgrid.com.au': 'wrw' };
   let started = false, lastPage = '', lastLocation = '';
   const purchases = new Set();
   const optedOut = () => (document.cookie || '').split(';').some(x => x.trim() === 'bg_analytics_optout=1');

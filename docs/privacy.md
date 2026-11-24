@@ -4,9 +4,9 @@ title: Privacy and analytics
 
 # Privacy and analytics
 
-Updated 23 November 2026.
+Updated 24 November 2026.
 
-Black Grid uses Google Analytics to understand visits to this website, What Revit Wants, PMGrid, ProXP and MyTendrils, and which public product, setup, download and checkout actions visitors use. The shared reporting property uses Brisbane time and Australian dollars. What Revit Wants also retains its existing historical reporting property.
+Black Grid uses Google Analytics to understand visits to this website, What Revit Wants, PMGrid, PulseGrid, ProXP and MyTendrils, and which public product, setup, download and checkout actions visitors use. The shared reporting property uses Brisbane time and Australian dollars. What Revit Wants also retains its existing historical reporting property.
 
 Analytics uses a random browser identifier and first-party cookies shared across Black Grid subdomains. It measures page views, broad device/browser information, referrals and engagement. For signed-in apps, page labels remove project and portfolio identifiers and use a fixed product title. URL queries and fragments are removed from page and referrer information. Only recognised public campaign labels are accepted.
 

@@ -59,7 +59,11 @@ The campaign is `pulsegrid-launch`. Reviewed Facebook, Black Grid LinkedIn and X
 
 Before launch, register the event-scoped custom dimensions **Action** (`action`) and **Product** (`product`) in the shared property if absent, so the optional event parameters are usable in explorations. These contain only fixed allowlisted labels. Follow [Google’s campaign configuration reference](https://developers.google.com/analytics/devguides/collection/ga4/reference/config) for the allowlisted campaign fields.
 
-Build a closed, same-session GA4 funnel using the shared property, filtered by **Session campaign = pulsegrid-launch** (break down by Session source / medium):
+The saved **PulseGrid launch — social to checkout** exploration is a closed user funnel: WRW article view → main product page view → PulseGrid billing view → Stripe handoff. It is filtered by **Session campaign = pulsegrid-launch** and broken down by **Session source**. GA4 disables the combined Session source / medium dimension for this funnel; source and medium are imported separately. Funnel users are not session counts, and a user can return across sessions. Use Traffic acquisition for session visit counts.
+
+[Open the launch exploration](https://analytics.google.com/analytics/web/#/analysis/a133640448p565459335/edit/hj8cyerjQ6auFbb3FmAbVQ). The saved range is This month, including launch day; adjust the range when reviewing the complete November–December campaign. New reporting data is subject to GA processing latency.
+
+For additional detail, the available events are:
 
 1. `page_view` on `wrw.blackgrid.com.au`, launch article path.
 2. `pulsegrid_cta` with action `landing` (WRW → main product page).
@@ -70,3 +74,5 @@ Build a closed, same-session GA4 funnel using the shared property, filtered by *
 Other public actions are `preview`, `open` and `guide`. Event values are fixed labels, never link queries, account IDs, project names or form input. App paths stay sanitised. The matching PulseGrid app change opens Connections & account after authentication for `?settings=account`, and emits the last two events. Deploy that app change and this shared script before releasing the campaign.
 
 **No PulseGrid `purchase` event is implemented or inferred from a success query.** Stripe remains the source of truth for paid subscriptions, coupon redemptions and revenue. This funnel measures visits through the purchase handoff, not verified paid conversion. Do not mark checkout or a free trial as a paid purchase. Existing ShadowGrid purchase measurement is independent and unchanged. Realtime/DebugView may be used for a real, consented walkthrough; automated regression tests intercept gtag and create no live orders or collection requests.
+
+PulseGrid public same-tab CTA clicks use a Google event callback before navigation, with a 250 ms event timeout and a 300 ms independent navigation fallback. Modified clicks, new tabs, downloads, already-cancelled navigation and privacy opt-outs retain their normal browser behavior. A missing Analytics library cannot strand a visitor. This addresses a real live check in which an immediate navigation dropped the queued click event.

@@ -6,9 +6,9 @@ import { webcrypto } from 'node:crypto';
 const source = fs.readFileSync(new URL('../docs/javascripts/analytics.js', import.meta.url), 'utf8');
 const id = 'G-4LFM33KC58';
 function browser(href = 'https://blackgrid.com.au/', options = {}) {
-  const scripts = [], listeners = {}, storage = options.storage || new Map();
+  const scripts = [], listeners = {}, timeouts = [], storage = options.storage || new Map();
   const cookies = new Map((options.cookie || '').split(';').filter(Boolean).map(x => x.trim().split('=')));
-  const location = { ...Object.fromEntries(['href', 'hostname', 'protocol', 'origin', 'pathname', 'search'].map(k => [k, new URL(href)[k]])), reload() { this.reloaded = true; } };
+  const location = { ...Object.fromEntries(['href', 'hostname', 'protocol', 'origin', 'pathname', 'search'].map(k => [k, new URL(href)[k]])), reload() { this.reloaded = true; }, assign(href) { (this.navigations ||= []).push(href); } };
   const document = {
     title: options.title || 'Black Grid', referrer: options.referrer || '',
     createElement: () => ({}), head: { appendChild: x => scripts.push(x) },
@@ -20,9 +20,9 @@ function browser(href = 'https://blackgrid.com.au/', options = {}) {
     set: value => { const [k, v] = value.split(';')[0].split('='); if (value.includes('Max-Age=0')) cookies.delete(k); else cookies.set(k, v); }
   });
   const context = { location, document, navigator: options.navigator || {}, window: options.window || {},
-    URL, Date, Set, sessionStorage: { getItem: k => storage.get(k), setItem: (k, v) => storage.set(k, v) } };
+    URL, Date, Set, setTimeout: (fn, ms) => timeouts.push({ fn, ms }), sessionStorage: { getItem: k => storage.get(k), setItem: (k, v) => storage.set(k, v) } };
   vm.createContext(context); vm.runInContext(source, context);
-  return { context, scripts, listeners, storage, cookies, commands: () => (context.window.dataLayer || []).map(x => [...x]) };
+  return { context, scripts, listeners, storage, cookies, timeouts, commands: () => (context.window.dataLayer || []).map(x => [...x]) };
 }
 const events = (b, name) => b.commands().filter(x => x[0] === 'event' && x[1] === name);
 const main = browser();
@@ -121,6 +121,35 @@ const blockedPulse = browser('https://pulse.blackgrid.com.au/', { navigator: { g
 assert.equal(blockedPulse.context.window.bgAnalytics.pulsegridCheckoutStarted(), false);
 assert.equal(blockedPulse.context.window.bgAnalytics.pulsegridBillingViewed(), false);
 assert.equal(blockedPulse.commands().length, 0);
+
+// A fast CTA must send before same-tab navigation, with a bounded no-library fallback.
+function navigationClick(b, options = {}) {
+  const href = 'https://pulse.blackgrid.com.au/?settings=account';
+  const link = { href, target: options.target || '', dataset: {}, hasAttribute: name => name === 'download' && !!options.download };
+  const e = { button: 0, defaultPrevented: false, ...options, preventDefault() { this.defaultPrevented = true; }, target: { closest: selector => selector === 'a[href]' ? link : null } };
+  b.listeners.click(e);
+  return e;
+}
+const quick = browser();
+assert.equal(navigationClick(quick).defaultPrevented, true);
+assert.equal(quick.context.location.navigations, undefined, 'do not navigate before the send callback');
+const quickEvent = events(quick, 'pulsegrid_cta')[0][2];
+assert.equal(quickEvent.event_timeout, 250);
+quickEvent.event_callback();
+quick.timeouts[0].fn();
+assert.equal(quick.context.location.navigations.length, 1, 'callback plus fallback navigate only once');
+const noCallback = browser();
+navigationClick(noCallback);
+assert.equal(noCallback.timeouts[0].ms, 300);
+noCallback.timeouts[0].fn();
+assert.equal(noCallback.context.location.navigations.length, 1, 'a missing Google callback cannot strand the visitor');
+for (const options of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }, { target: '_blank' }, { download: true }, { defaultPrevented: true }]) {
+  const b = browser(); navigationClick(b, options);
+  assert.equal(b.timeouts.length, 0, 'retain native modified/new-tab/download or already-handled clicks');
+}
+const noTrackingNavigation = browser(undefined, { navigator: { globalPrivacyControl: true } });
+assert.equal(navigationClick(noTrackingNavigation).defaultPrevented, false);
+assert.equal(noTrackingNavigation.timeouts.length, 0);
 
 // Exercise the actual fulfilment script, without creating orders or sending events.
 const fulfilment = fs.readFileSync(new URL('../docs/javascripts/shadowgrid.js', import.meta.url), 'utf8');

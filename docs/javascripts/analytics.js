@@ -68,6 +68,7 @@
     if (['facebook', 'linkedin', 'x', 'twitter', 'wrw', 'blackgrid', 'followit', 'newsletter'].includes(params.get('utm_source'))) settings.campaign_source = params.get('utm_source');
     if (['social', 'organic_social', 'email', 'referral'].includes(params.get('utm_medium'))) settings.campaign_medium = params.get('utm_medium');
     if (['shadowgrid-launch-20261121', 'shadowgrid-launch', 'pulsegrid-launch'].includes(params.get('utm_campaign'))) settings.campaign_name = params.get('utm_campaign');
+    if (['pulsegrid-launch-post'].includes(params.get('utm_content'))) settings.campaign_content = params.get('utm_content');
     window.gtag('config', id, settings);
     if (!document.querySelector('script[src^="https://www.googletagmanager.com/gtag/js"]')) {
       const script = document.createElement('script');
@@ -83,6 +84,7 @@
     return true;
   }
   const item = { item_id: 'shadowgrid-v1', item_name: 'ShadowGrid framework v1', quantity: 1 };
+  const pulseItem = { item_id: 'pulsegrid-collaborator-monthly', item_name: 'PulseGrid personal collaborator', price: 29, quantity: 1 };
   function pageView() {
     if (blocked()) return false;
     const key = location.origin + location.pathname;
@@ -97,6 +99,9 @@
     lastLocation = page.page_location;
     if (location.hostname === 'blackgrid.com.au' && location.pathname === '/projects/shadowgrid/') {
       event('view_item', { currency: 'AUD', value: 249, items: [{ ...item, price: 249 }] });
+    }
+    if (location.hostname === 'blackgrid.com.au' && location.pathname === '/projects/pulsegrid/') {
+      event('view_item', { currency: 'AUD', value: 29, items: [pulseItem] });
     }
     return true;
   }
@@ -127,6 +132,8 @@
     pageView, purchase, enabled: () => !blocked(),
     checkoutStarted: () => event('begin_checkout', { currency: 'AUD', value: 249, items: [{ ...item, price: 249 }] }),
     checkoutFailed: () => event('checkout_error', { product: 'shadowgrid' }),
+    pulsegridBillingViewed: () => location.hostname === 'pulse.blackgrid.com.au' && event('pulsegrid_billing_view', { product: 'pulsegrid' }),
+    pulsegridCheckoutStarted: () => location.hostname === 'pulse.blackgrid.com.au' && event('begin_checkout', { product: 'pulsegrid', currency: 'AUD', value: 29, items: [pulseItem] }),
     preference
   };
   document.addEventListener('click', e => {
@@ -137,6 +144,15 @@
     const link = e.target.closest?.('a[href]');
     if (!link) return;
     const url = new URL(link.href, location.href);
+    // Internal links keep the original session attribution: never replace social UTMs with "wrw".
+    let pulseAction = '';
+    if (url.hostname === 'blackgrid.com.au' && url.pathname === '/projects/pulsegrid/') pulseAction = 'landing';
+    if (url.hostname === 'pulse.blackgrid.com.au') {
+      if (url.pathname === '/') pulseAction = url.searchParams.get('settings') === 'account' ? 'start' : 'open';
+      else if (url.pathname === '/preview') pulseAction = 'preview';
+      else if (['/help/user', '/help/mcp'].includes(url.pathname)) pulseAction = 'guide';
+    }
+    if (pulseAction) event('pulsegrid_cta', { product: 'pulsegrid', action: pulseAction });
     if (url.protocol === 'mailto:') { event('contact_click', { method: 'email' }); return; }
     if (products[url.hostname] && url.hostname !== location.hostname) event('product_open', { product: products[url.hostname] });
     if (url.hostname === 'blackgrid.com.au' && url.pathname === '/projects/shadowgrid/install/') {

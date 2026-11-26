@@ -52,3 +52,21 @@ For live checks, verify a successful `page_view` collection request with the sha
 ## Google container settings
 
 The automatically created Google Analytics tag initially ignored on-page configuration and generated an extra default page view. On 24 November, container version 3 sets `send_page_view=false` at the destination and allows the explicit on-page configuration. It also disables user-provided-data capabilities and automatic email/phone/name detection. Version 2 disabled automatic event/history/form/link/video/download detection. Keep both Google-side and source-side controls when editing this integration; the GA stream's Enhanced Measurement toggle alone did not configure these container controls. Recheck actual collection requests after changes.
+
+## PulseGrid launch funnel · 27 November 2026
+
+The campaign is `pulsegrid-launch`. Reviewed Facebook, Black Grid LinkedIn and X posts link to the single WRW launch article with `utm_source=facebook|linkedin|x`, `utm_medium=organic_social`, `utm_campaign=pulsegrid-launch` and `utm_content=pulsegrid-launch-post`. These exact values are allowlisted. WRW → Black Grid → PulseGrid links have **no new UTMs**: the shared first-party GA cookie preserves the original session source rather than attributing the conversion to our own site. Attribution remains subject to browser privacy choices and session expiry.
+
+Before launch, register the event-scoped custom dimensions **Action** (`action`) and **Product** (`product`) in the shared property if absent, so the optional event parameters are usable in explorations. These contain only fixed allowlisted labels. Follow [Google’s campaign configuration reference](https://developers.google.com/analytics/devguides/collection/ga4/reference/config) for the allowlisted campaign fields.
+
+Build a closed, same-session GA4 funnel using the shared property, filtered by **Session campaign = pulsegrid-launch** (break down by Session source / medium):
+
+1. `page_view` on `wrw.blackgrid.com.au`, launch article path.
+2. `pulsegrid_cta` with action `landing` (WRW → main product page).
+3. `view_item`, item ID `pulsegrid-collaborator-monthly`, on `blackgrid.com.au/projects/pulsegrid/`.
+4. `pulsegrid_cta` with action `start` (launch CTA), then `pulsegrid_billing_view` on `pulse.blackgrid.com.au`.
+5. `begin_checkout` with product `pulsegrid`: the authenticated server has returned a Stripe Checkout URL and the browser is about to open it. The monthly list price is AUD 29; a trial or coupon can change the actual charge.
+
+Other public actions are `preview`, `open` and `guide`. Event values are fixed labels, never link queries, account IDs, project names or form input. App paths stay sanitised. The matching PulseGrid app change opens Connections & account after authentication for `?settings=account`, and emits the last two events. Deploy that app change and this shared script before releasing the campaign.
+
+**No PulseGrid `purchase` event is implemented or inferred from a success query.** Stripe remains the source of truth for paid subscriptions, coupon redemptions and revenue. This funnel measures visits through the purchase handoff, not verified paid conversion. Do not mark checkout or a free trial as a paid purchase. Existing ShadowGrid purchase measurement is independent and unchanged. Realtime/DebugView may be used for a real, consented walkthrough; automated regression tests intercept gtag and create no live orders or collection requests.

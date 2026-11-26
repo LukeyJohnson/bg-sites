@@ -92,6 +92,36 @@ assert.ok(!preference.cookies.has('_ga_4LFM33KC58'));
 assert.equal(preference.context.window['ga-disable-G-2CJ2VLZ8MY'], true);
 assert.equal(preference.context.location.reloaded, true);
 
+// Launch attribution and the real PulseGrid checkout handoff use the shared destination.
+const launch = browser('https://wrw.blackgrid.com.au/pulsegrid-a-shared-board-for-people-and-agents/?utm_source=linkedin&utm_medium=organic_social&utm_campaign=pulsegrid-launch&utm_content=pulsegrid-launch-post');
+const launchConfig = launch.commands().find(x => x[0] === 'config')[2];
+assert.equal(launchConfig.campaign_source, 'linkedin');
+assert.equal(launchConfig.campaign_name, 'pulsegrid-launch');
+assert.equal(launchConfig.campaign_content, 'pulsegrid-launch-post');
+function click(b, href) {
+  b.listeners.click({ target: { closest: selector => selector === 'a[href]' ? { href, dataset: {} } : null } });
+}
+click(launch, 'https://blackgrid.com.au/projects/pulsegrid/');
+assert.equal(events(launch, 'pulsegrid_cta')[0][2].action, 'landing');
+const pulseLanding = browser('https://blackgrid.com.au/projects/pulsegrid/');
+assert.equal(events(pulseLanding, 'view_item')[0][2].items[0].item_id, 'pulsegrid-collaborator-monthly');
+assert.equal(pulseLanding.commands().find(x => x[0] === 'config')[2].campaign_source, undefined, 'internal pages preserve session attribution');
+click(pulseLanding, 'https://pulse.blackgrid.com.au/?settings=account');
+assert.equal(events(pulseLanding, 'pulsegrid_cta')[0][2].action, 'start');
+const pulse = browser('https://pulse.blackgrid.com.au/?settings=account&email=private@example.com', { title: 'Private account' });
+assert.equal(pulse.context.window.bgAnalytics.pulsegridBillingViewed(), true);
+assert.equal(pulse.context.window.bgAnalytics.pulsegridCheckoutStarted(), true);
+assert.equal(events(pulse, 'begin_checkout')[0][2].value, 29);
+assert.equal(events(pulse, 'begin_checkout')[0][2].send_to, id);
+assert.equal(events(pulse, 'purchase').length, 0, 'opening subscription checkout never claims a paid purchase');
+assert.ok(!JSON.stringify(pulse.commands()).includes('private@example.com'));
+assert.ok(!JSON.stringify(pulse.commands()).includes('Private account'));
+assert.equal(main.context.window.bgAnalytics.pulsegridCheckoutStarted(), false, 'only the PulseGrid app may report its handoff');
+const blockedPulse = browser('https://pulse.blackgrid.com.au/', { navigator: { globalPrivacyControl: true } });
+assert.equal(blockedPulse.context.window.bgAnalytics.pulsegridCheckoutStarted(), false);
+assert.equal(blockedPulse.context.window.bgAnalytics.pulsegridBillingViewed(), false);
+assert.equal(blockedPulse.commands().length, 0);
+
 // Exercise the actual fulfilment script, without creating orders or sending events.
 const fulfilment = fs.readFileSync(new URL('../docs/javascripts/shadowgrid.js', import.meta.url), 'utf8');
 async function completedOrder(qaOrder, amountTotal, currency = 'aud') {

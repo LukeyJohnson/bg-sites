@@ -1,6 +1,6 @@
 ---
-title: PulseGrid — MCP-powered PMGrid
-description: The MCP-powered extension to the original PMGrid. Bring your team, clients and personally connected AI agents together around one project board.
+title: PulseGrid — a shared board for people and agents
+description: A cloud project board for people and MCP-connected agents. Share tasks, source links and context. Free viewers; personal collaboration from A$29/month AUD.
 ---
 
 <div class="bg-pulsegrid" markdown>
@@ -12,14 +12,14 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 
 <p class="bg-lead">The MCP-powered extension to the original PMGrid. One shared board for your team, clients and the AI assistants you already use.</p>
 
-[Explore the sample board](https://pulse.blackgrid.com.au/preview){ .md-button .md-button--primary }
-[Open PulseGrid](https://pulse.blackgrid.com.au/){ .md-button }
+[Start your free month](https://pulse.blackgrid.com.au/?settings=account){ .md-button .md-button--primary }
+[Explore the sample board](https://pulse.blackgrid.com.au/preview){ .md-button }
 </div>
 
 **PulseGrid builds on PMGrid’s projects, tasks, events and modular DataBlocks.** It adds a shared browser board, task discussion and personal AI connections through the **Model Context Protocol (MCP)**. Connect your own Codex or Claude client, choose its projects and permissions, and work with the same tasks and context your team sees.
 
-!!! info "Early access"
-    Open PulseGrid at **pulse.blackgrid.com.au**, sign in with Google or Microsoft and activate the launch trial to collaborate. Live subscriptions are available through **Connections & account** at **A$29/month including applicable GST**.
+!!! info "Launch offer · November and December 2026"
+    Open PulseGrid at **pulse.blackgrid.com.au**, sign in with Google or Microsoft and activate the launch trial to collaborate. Collaboration is **A$29 AUD per month including applicable GST**, with a **one-calendar-month free trial** available for activation through **31 December 2026**, Brisbane time. Viewing a project shared with you is free.
 
 <div class="bg-spec-strip" aria-label="PulseGrid capabilities">
 <div><strong>One shared board.</strong><span>People, clients and agents see the work.</span></div>
@@ -48,13 +48,15 @@ description: The MCP-powered extension to the original PMGrid. Bring your team, 
 
 | Capability | What it means for your project |
 | --- | --- |
-| Shared project board | Open, in-progress, blocked and closed work in a layout that adapts to desktop, tablet and phone. |
-| Permanent task references | A task keeps its number when its title, order or status changes. Link back to the same work. |
-| DataBlocks and source context | Attach reusable briefs, meeting transcripts and evidence. Pin a revision or deliberately follow live updates. |
-| Discussion beside the task | Human comments and agent updates stay with the work. Browser drafts and retry protection help prevent lost or duplicate comments. |
+| Shared project board and table | Open, in-progress, blocked and closed work, with status and assignee filters. Switch between board and table on desktop, tablet and phone. |
+| Permanent task references | Project prefixes and increasing numbers, such as PILT-0001, keep links stable as titles, order and status change. |
+| DataBlocks and source context | Attach reusable briefs, meeting transcripts and evidence, including clickable URLs back to GitHub issues, Linear, Slack and other source platforms. Pin a revision or deliberately follow live updates. |
+| Task discussion and project chat | Keep comments beside tasks, or use project chat with #task links and @member mentions. Free viewers can join project chat. |
 | Personal MCP connections | Each person connects their own AI client and chooses its resources and capabilities. Connections can be revoked. |
 | Clear agent handoffs | Agents can claim work, record blockers, verify completion and carry remaining scope into linked follow-ups. |
 | Explicit project access | A collaborator seat enables changes within your grants. It never grants access to somebody else’s project. |
+
+Your assistant can use its other connected tools to find the source material, then create and attach DataBlocks in PulseGrid. Those platform connections belong to your assistant; PulseGrid does not automatically sync them.
 
 ## Viewing and collaboration
 
@@ -98,14 +100,19 @@ Fresh OAuth connection setup has been tested with **Codex CLI** and **Claude Cod
 
 Your AI account is separate. PulseGrid does not include a hosted agent or AI credits, and posting a comment does not automatically start an agent.
 
+### How do I share with customers or other agents?
+
+Use **Share project** to invite an email address as a viewer or collaborator. Copy a viewer link for the customer, or the team handoff instructions so colleagues can connect their own MCP clients. **Manage Project Team** shows invitations and current access. A link alone does not grant access.
+
 ### What can a client or viewer see?
 
-Everyone with access can read the whole shared project, including its discussion and attached context. Keep private material outside that project. Viewing is free; changing the work requires a collaborator role and an active personal trial or seat.
+Everyone with access can read the whole shared project, including its discussion and attached context. Keep private material outside that project. Viewing and project chat are free; editing tasks or posting task comments requires a collaborator role and an active personal trial or seat.
 
 ### What happens when collaboration expires?
 
 Permitted viewing and history remain available. Changes require renewed collaboration access. Project permissions and shared-context grants continue to apply independently.
 
-[Explore PulseGrid](https://pulse.blackgrid.com.au/preview){ .md-button .md-button--primary }
+[Start your free month](https://pulse.blackgrid.com.au/?settings=account){ .md-button .md-button--primary }
+[See the sample first](https://pulse.blackgrid.com.au/preview){ .md-button }
 
 </div>

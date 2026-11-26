@@ -14,6 +14,12 @@
   const site = sites[location.hostname];
   const privateApps = ['pulse.blackgrid.com.au', 'pmgrid.blackgrid.com.au', 'proxp.blackgrid.com.au', 'mytendrils.blackgrid.com.au'];
   const products = { 'pulse.blackgrid.com.au': 'pulsegrid', 'pmgrid.blackgrid.com.au': 'pmgrid', 'proxp.blackgrid.com.au': 'proxp', 'mytendrils.blackgrid.com.au': 'mytendrils', 'wrw.blackgrid.com.au': 'wrw' };
+  const campaignValues = {
+    utm_source: ['facebook', 'linkedin', 'x', 'twitter', 'wrw', 'blackgrid', 'followit', 'newsletter'],
+    utm_medium: ['social', 'organic_social', 'email', 'referral'],
+    utm_campaign: ['shadowgrid-launch-20261121', 'shadowgrid-launch', 'pulsegrid-launch'],
+    utm_content: ['pulsegrid-launch-post']
+  };
   let started = false, lastPage = '', lastLocation = '';
   const purchases = new Set();
   const optedOut = () => (document.cookie || '').split(';').some(x => x.trim() === 'bg_analytics_optout=1');
@@ -37,6 +43,19 @@
     if (/^\/projects\/[^/]+\/?$/.test(url.pathname)) return '/projects/_id';
     return '/private/';
   }
+  function measuredLocation(url) {
+    const safe = new URL(url.origin + path(url));
+    // GA4 derives campaign attribution from document location. Preserve only a
+    // complete approved public campaign; never copy arbitrary query values.
+    if (!privateApps.includes(url.hostname) && ['utm_source', 'utm_medium', 'utm_campaign']
+        .every(key => campaignValues[key].includes(url.searchParams.get(key)))) {
+      for (const [key, allowed] of Object.entries(campaignValues)) {
+        const value = url.searchParams.get(key);
+        if (allowed.includes(value)) safe.searchParams.set(key, value);
+      }
+    }
+    return safe.href;
+  }
   function context() {
     const here = new URL(location.href);
     let referrer = '';
@@ -45,7 +64,7 @@
       if (/^https?:$/.test(ref.protocol)) referrer = ref.origin + (sites[ref.hostname] ? path(ref) : '/');
     } catch { /* No referrer is normal. */ }
     return {
-      page_location: here.origin + path(here),
+      page_location: measuredLocation(here),
       page_referrer: referrer,
       page_title: privateApps.includes(here.hostname) ? site : (/@/.test(document.title || '') ? site : document.title),
       site_name: site
@@ -65,10 +84,10 @@
       allow_interest_groups: false, cookie_flags: 'SameSite=Lax;Secure' };
     // Only known public campaign labels are accepted; no arbitrary URL values.
     const params = new URL(location.href).searchParams;
-    if (['facebook', 'linkedin', 'x', 'twitter', 'wrw', 'blackgrid', 'followit', 'newsletter'].includes(params.get('utm_source'))) settings.campaign_source = params.get('utm_source');
-    if (['social', 'organic_social', 'email', 'referral'].includes(params.get('utm_medium'))) settings.campaign_medium = params.get('utm_medium');
-    if (['shadowgrid-launch-20261121', 'shadowgrid-launch', 'pulsegrid-launch'].includes(params.get('utm_campaign'))) settings.campaign_name = params.get('utm_campaign');
-    if (['pulsegrid-launch-post'].includes(params.get('utm_content'))) settings.campaign_content = params.get('utm_content');
+    if (campaignValues.utm_source.includes(params.get('utm_source'))) settings.campaign_source = params.get('utm_source');
+    if (campaignValues.utm_medium.includes(params.get('utm_medium'))) settings.campaign_medium = params.get('utm_medium');
+    if (campaignValues.utm_campaign.includes(params.get('utm_campaign'))) settings.campaign_name = params.get('utm_campaign');
+    if (campaignValues.utm_content.includes(params.get('utm_content'))) settings.campaign_content = params.get('utm_content');
     window.gtag('config', id, settings);
     if (!document.querySelector('script[src^="https://www.googletagmanager.com/gtag/js"]')) {
       const script = document.createElement('script');

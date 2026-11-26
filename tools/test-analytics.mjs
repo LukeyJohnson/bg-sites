@@ -151,6 +151,24 @@ const noTrackingNavigation = browser(undefined, { navigator: { globalPrivacyCont
 assert.equal(navigationClick(noTrackingNavigation).defaultPrevented, false);
 assert.equal(noTrackingNavigation.timeouts.length, 0);
 
+// GA4 receives approved campaign tags in document location, with all other data excluded.
+const attributionBase = 'https://wrw.blackgrid.com.au/pulsegrid-a-shared-board-for-people-and-agents/';
+for (const channel of ['facebook', 'linkedin', 'x', 'blackgrid']) {
+  const utm = '?utm_source=' + channel + '&utm_medium=organic_social&utm_campaign=pulsegrid-launch&utm_content=pulsegrid-launch-post';
+  const b = browser(attributionBase + utm + '&email=person@example.com&token=SECRET&fbclid=TRACKING_ID#PRIVATE');
+  assert.equal(events(b, 'page_view')[0][2].page_location, attributionBase + utm);
+  assert.ok(!JSON.stringify(b.commands()).includes('person@example.com'));
+  for (const secret of ['SECRET', 'TRACKING_ID', 'PRIVATE']) assert.ok(!JSON.stringify(b.commands()).includes(secret));
+}
+for (const query of [
+  '?utm_source=person@example.com&utm_medium=social&utm_campaign=pulsegrid-launch',
+  '?utm_source=facebook&utm_medium=PRIVATE&utm_campaign=pulsegrid-launch',
+  '?utm_source=facebook&utm_medium=social&utm_campaign=person@example.com',
+  '?utm_source=facebook&utm_campaign=pulsegrid-launch'
+]) assert.equal(events(browser(attributionBase + query), 'page_view')[0][2].page_location, attributionBase, 'incomplete or unapproved campaigns have no query');
+const privateCampaign = browser('https://pulse.blackgrid.com.au/?utm_source=facebook&utm_medium=organic_social&utm_campaign=pulsegrid-launch&project=PRIVATE');
+assert.equal(events(privateCampaign, 'page_view')[0][2].page_location, 'https://pulse.blackgrid.com.au/', 'private app URLs always remain query-free');
+
 // Exercise the actual fulfilment script, without creating orders or sending events.
 const fulfilment = fs.readFileSync(new URL('../docs/javascripts/shadowgrid.js', import.meta.url), 'utf8');
 async function completedOrder(qaOrder, amountTotal, currency = 'aud') {

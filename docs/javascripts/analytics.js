@@ -152,7 +152,26 @@
       else if (url.pathname === '/preview') pulseAction = 'preview';
       else if (['/help/user', '/help/mcp'].includes(url.pathname)) pulseAction = 'guide';
     }
-    if (pulseAction) event('pulsegrid_cta', { product: 'pulsegrid', action: pulseAction });
+    if (pulseAction) {
+      const values = { product: 'pulsegrid', action: pulseAction };
+      // Give gtag time to send before leaving the document. Never hold modified,
+      // new-tab, download or opted-out clicks; a blocked library cannot strand a link.
+      if (!blocked() && !e.defaultPrevented && e.button === 0 &&
+          !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey &&
+          (!link.target || link.target === '_self') && !link.hasAttribute?.('download')) {
+        e.preventDefault();
+        let followed = false;
+        const follow = () => {
+          if (followed) return;
+          followed = true;
+          location.assign(url.href);
+        };
+        setTimeout(follow, 300);
+        values.event_callback = follow;
+        values.event_timeout = 250;
+      }
+      event('pulsegrid_cta', values);
+    }
     if (url.protocol === 'mailto:') { event('contact_click', { method: 'email' }); return; }
     if (products[url.hostname] && url.hostname !== location.hostname) event('product_open', { product: products[url.hostname] });
     if (url.hostname === 'blackgrid.com.au' && url.pathname === '/projects/shadowgrid/install/') {

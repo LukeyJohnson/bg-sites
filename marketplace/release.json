@@ -1,0 +1,48 @@
+{
+  "revision": "efcc523ed9df92f9c24dde696ec600a8e54f2bac",
+  "api": "https://shadowgrid-marketplace-uwmmxi4eha-ts.a.run.app",
+  "signingKeyId": "sg-marketplace-2026-1",
+  "signingPublicKeySha256": "4172c08caf97043b892909497882dfc63686a6315e55c15b70bf8ae875dfe88e",
+  "files": [
+    {
+      "path": "assets/index-CcvKEcDQ.js",
+      "bytes": 482433,
+      "sha256": "49a3dcd67d289fa5d3be3bb946768d1213d23b44f6de0f2ff1a07cd6766c0ff4"
+    },
+    {
+      "path": "assets/index-DtgMWB2P.css",
+      "bytes": 17688,
+      "sha256": "3381a32e307f01494306c5826ad19f15bedb5653e1b8da724b917f8606dee0e1"
+    },
+    {
+      "path": "fonts/DM-Sans-OFL.txt",
+      "bytes": 4388,
+      "sha256": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2"
+    },
+    {
+      "path": "fonts/Manrope-OFL.txt",
+      "bytes": 4386,
+      "sha256": "d6a309fcfb963d329a93baf9df66fa5f3c23a4be2b5f67edf24d6cafecde12ac"
+    },
+    {
+      "path": "fonts/dm-sans-latin.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "path": "fonts/manrope-latin.woff2",
+      "bytes": 24532,
+      "sha256": "8c2def024c1bf31aacf3624ae3c4d701269b4ec3dc765c04830839f0d36b2d9e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 752,
+      "sha256": "ea2fe5c4086f1dba1c0a76220040eb8ff1f94b7679910deb51c12d7edddd1595"
+    },
+    {
+      "path": "mark.svg",
+      "bytes": 361,
+      "sha256": "8fe1756eb5c26a7c437874447139273e9f6dd6371400250a3b38f53dba194470"
+    }
+  ]
+}

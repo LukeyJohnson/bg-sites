@@ -1,0 +1,53 @@
+/* Bakery's landing page only; shared theme and navigation retain their styles. */
+.bg-bakery .bg-bakery-author {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 5px 11px;
+  border: 1px solid var(--bg-border);
+  border-radius: 5px;
+  color: var(--bg-accent);
+  font-family: var(--md-code-font);
+  font-size: 11px;
+}
+.bg-bakery .bg-page-intro { padding-bottom: 32px; }
+.bg-bakery .bg-lead { max-width: 46rem; }
+.bg-bakery .bg-spec-strip strong { font-size: clamp(18px, 2vw, 25px); }
+.bg-bakery .bg-spec-strip span { display: block; line-height: 1.7; margin-top: 5px; }
+.bg-bakery > h2 { margin-top: 2.5em; }
+.bg-bakery .bg-screenshot figcaption { font-style: normal; }
+.bg-bakery .bg-screenshot figcaption a { display: inline; }
+.bg-bakery .bg-bakery-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+  margin: 24px 0;
+}
+.bg-bakery .bg-bakery-capabilities > div {
+  border-top: 1px solid var(--bg-border);
+  padding: 21px 0;
+}
+.bg-bakery .bg-bakery-capabilities dt { color: var(--md-default-fg-color); font-size: 16px; font-weight: 650; }
+.bg-bakery .bg-bakery-capabilities dd { margin: 10px 0 0; color: var(--bg-muted); font-size: 14px; line-height: 1.8; }
+.bg-bakery .bg-bakery-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.bg-bakery .bg-bakery-examples > section { min-width: 0; }
+.bg-bakery .bg-bakery-examples > section > p { color: var(--bg-muted); font-size: 14px; }
+.bg-bakery .bg-bakery-examples .bg-screenshot { margin-top: 22px; }
+.bg-bakery .bg-bakery-examples .bg-screenshot img { height: 340px; object-fit: contain; background: #f8f8f8; }
+.bg-bakery .bg-bakery-examples .bg-screenshot figcaption { min-height: 76px; line-height: 1.8; }
+.bg-bakery .bg-bakery-archive {
+  margin: 32px 0;
+  padding: 8px 24px 24px;
+  border: 1px solid var(--bg-border);
+  border-left: 3px solid var(--bg-accent);
+  border-radius: 10px;
+  background: var(--bg-surface);
+}
+.bg-bakery .bg-bakery-archive p { color: var(--bg-muted); }
+.bg-bakery .bg-bakery-archive .md-button { margin: 8px 8px 0 0; }
+.bg-bakery .bg-bakery-footer { margin-top: 32px; font-size: 13px; color: var(--bg-muted); }
+@media (max-width: 700px) {
+  .bg-bakery .bg-bakery-capabilities,
+  .bg-bakery .bg-bakery-examples { grid-template-columns: 1fr; gap: 0; }
+  .bg-bakery .bg-bakery-examples .bg-screenshot img { height: auto; max-height: 460px; }
+  .bg-bakery .bg-bakery-examples .bg-screenshot figcaption { min-height: 0; }
+}

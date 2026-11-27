@@ -1,0 +1,13 @@
+{
+  "keys": [
+    {
+      "id": "sg-update-2026-01",
+      "purpose": "update",
+      "kty": "RSA",
+      "alg": "RS256",
+      "use": "sig",
+      "n": "2sl97-91k8yh6yV8oBW9w7fujCQ40gpSd1Hf9jn_LNn4WxuhoBE6CHmttan52hxwvmpZzATDhI-YkizsBqhLsoDc-8Nh4wBXO0ostWp3cZhZwENBov1M-8AlaHvJPBJrccDjxJupFkwQRyjefmkQtPUBQFL-U2R9kTeuKQK3Xg-SR2xlWfYL3rLBrNLv1iRB96CNtIO09uBppXHhhWm978sk7FqttWOACIrMq5VlFs_M-CORTGHLQb1LR5iPPuj_m5w43nX5FFTX593qDnO1MjdZB1EWnFs1jYGsw76S-VJbo6b2S-60XFVfhmnoQGkyLNqgN9kczxkE-TVZwoqB8IsNDh-ScmxcTZ8181vU0cJtf1L5pJbtJctFsbgg_CfHQqnSRBDTS7yXFJ9UXjJrWRrEHHE1NrbBTNt65ZMIa4IzA4x5obuvklh5RX3jzOMk9BW2PuUXuJ3P3_oV0aJGPqlfcDkturSxjYofn_q8Ppj7Ij2p18mtP0Nn52q0epll",
+      "e": "AQAB"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ Go from installation to your first working Revit tool on this page. Bring the AI
 1. [Download, set up Windows trust and install](#first-installation).
 2. [Activate and run the included example](#c-activate-and-check-the-first-run).
 3. [Create, save, run and revise your first tool](#create-your-first-tool). Copy the design guide into your AI chat, or use the [optional Claude/Codex MCP connection](#optional-mcp-for-claude-or-codex).
+4. Or [find a public tool or accept a private share in the marketplace](#use-a-marketplace-script).
 
 You can start a **14-day trial** or [buy a founding licence](../shadowgrid.md#get-started). MCP configuration is optional; copying the design guide works with an ordinary AI chat.
 
@@ -97,6 +98,21 @@ Ask your AI to change the dialog title to **My updated ShadowGrid tool**, keepin
 ShadowGrid reads the selected file again on each run. Imported helper modules can remain cached; changes to them and new dependencies may require extra setup. Follow the design guide rather than installing arbitrary packages into the bundled runtime.
 
 You now have the basic workflow: **give your AI the rules → describe a task → review → save → refresh/select → run → revise and rerun**.
+
+## Use a marketplace script
+
+The [ShadowGrid Marketplace](/marketplace/) is the cloud library for public discovery and private sharing. You can browse public tools without signing in. Use **Sign in with Google** to keep your own library or accept a release shared with your verified email address. An existing Black Grid / PulseGrid Google account uses the same identity; tools and workspace access are granted separately.
+
+1. Open a tool and read its guide, declared Revit versions and behaviour. Review the Python source. Package verification checks the signature and file hashes; it does not establish that the script is safe or has been tested in your model.
+2. Choose **Download .py**. The release-package ZIP also contains the guide, source-use licence and signed manifest for your records.
+3. In Revit, choose **ShadowGrid → Open Folder** and copy the downloaded `.py` file directly into that folder. Check its filename and keep a backup before replacing a local file with the same name.
+4. Choose **Refresh List**, select the filename and click **Run** in a suitable test document. ShadowGrid runs the local file using your normal Windows and Revit permissions.
+
+There is no in-Revit marketplace browser or automatic script installer in the current desktop release. Changing a cloud release does not update a local copy automatically. Framework licence activation and signed framework updates continue separately.
+
+To share your own tool, create it in **My library**, archive a version with a Python file and guide, then choose **Share privately**. Enter the recipient's email and copy the invitation link or open the email draft to send it yourself. The service does not send the email automatically. The recipient signs in with the intended verified address and accepts that exact release; the invitation expires after seven days. Revocation blocks future downloads but cannot recall a file already downloaded.
+
+**Submit to public collection** creates a separate public snapshot for review. Check every file for customer data and credentials, select the source-use licence and confirm your publication rights. Approval applies to the exact submitted manifest. Your private recipients and version history are not published. [Sharing and privacy](/marketplace/#/about).
 
 ## Optional MCP for Claude or Codex
 

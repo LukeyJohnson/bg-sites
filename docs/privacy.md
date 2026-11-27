@@ -4,11 +4,11 @@ title: Privacy and analytics
 
 # Privacy and analytics
 
-Updated 24 November 2026.
+Updated 27 November 2026.
 
 Black Grid uses Google Analytics to understand visits to this website, What Revit Wants, PMGrid, PulseGrid, ProXP and MyTendrils, and which public product, setup, download and checkout actions visitors use. The shared reporting property uses Brisbane time and Australian dollars. What Revit Wants also retains its existing historical reporting property.
 
-Analytics uses a random browser identifier and first-party cookies shared across Black Grid subdomains. It measures page views, broad device/browser information, referrals and engagement. For signed-in apps, page labels remove project and portfolio identifiers and use a fixed product title. URL fragments and arbitrary query values are removed. On public Black Grid and WRW pages, a complete campaign may retain only fixed, recognised source, medium, campaign and content tags so we can measure a launch. Referrers and signed-in app URLs remain query-free. Account fields, tokens and advertising click IDs are excluded.
+Analytics uses a random browser identifier and first-party cookies shared across Black Grid subdomains. It measures page views, broad device/browser information, referrals and engagement. For signed-in apps, page labels remove project and portfolio identifiers and use a fixed product title. URL fragments and arbitrary query values are removed. On public Black Grid and WRW pages, a complete campaign may retain only fixed, recognised source, medium, campaign and content tags so we can measure a launch. Referrers and signed-in app URLs remain query-free. Account fields, tokens and advertising click IDs are excluded. The marketplace uses a fixed page label and strips private routes, invitations and recipient fields.
 
 We do not send names, email addresses, account IDs, licence keys, checkout session references, project/task content, prompts or captured conversations to Analytics. Automatic form, site-search and outbound-link capture is disabled in the shared stream. Advertising personalisation and Google signals are disabled. The ShadowGrid purchase count uses a one-way hashed reference after the payment service verifies a paid order; test/complimentary orders are excluded. It does not report revenue amounts or replace Stripe's financial records.
 

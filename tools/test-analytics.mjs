@@ -61,6 +61,13 @@ for (const host of ['pmgrid', 'mytendrils', 'proxp', 'pulse']) {
   assert.ok(!JSON.stringify(b.commands()).includes('ANOTHER_PRIVATE_ID'));
 }
 const campaign = browser('https://blackgrid.com.au/?utm_source=linkedin&utm_medium=social&utm_campaign=shadowgrid-launch&session_id=cs_live_SECRET&email=someone@example.com#SECRET');
+const marketplace = browser('https://blackgrid.com.au/marketplace/private/PRIVATE_RELEASE?email=recipient@example.invalid#/invite/PRIVATE_INVITE', { title: 'PRIVATE_TOOL', referrer: 'https://blackgrid.com.au/marketplace/private/PRIVATE_RECIPIENT#PRIVATE_GRANT' });
+assert.equal(events(marketplace, 'page_view')[0][2].page_location, 'https://blackgrid.com.au/marketplace/');
+assert.equal(events(marketplace, 'page_view')[0][2].page_title, 'ShadowGrid Marketplace');
+assert.ok(!JSON.stringify(marketplace.commands()).includes('PRIVATE_'));
+assert.ok(!JSON.stringify(marketplace.commands()).includes('recipient@example.invalid'));
+marketplace.listeners.click({ target: { closest: selector => selector === 'a[href]' ? ({ href: 'mailto:recipient@example.invalid', dataset: {} }) : null } });
+assert.equal(events(marketplace, 'contact_click').length, 0, 'private share drafts must not be recorded as public contacts');
 assert.equal(campaign.commands().find(x => x[0] === 'config')[2].campaign_source, 'linkedin');
 assert.ok(!JSON.stringify(campaign.commands()).includes('SECRET'));
 assert.ok(!JSON.stringify(campaign.commands()).includes('someone@example.com'));

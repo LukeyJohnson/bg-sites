@@ -1,13 +1,13 @@
 {
-  "revision": "a2dacb4c4ca2ded49523a0c02adff2f3d6274345",
+  "revision": "efcc523ed9df92f9c24dde696ec600a8e54f2bac",
   "api": "https://shadowgrid-marketplace-uwmmxi4eha-ts.a.run.app",
   "signingKeyId": "sg-marketplace-2026-1",
   "signingPublicKeySha256": "4172c08caf97043b892909497882dfc63686a6315e55c15b70bf8ae875dfe88e",
   "files": [
     {
-      "path": "assets/index-DVbY5C00.js",
-      "bytes": 482172,
-      "sha256": "b72b165f4b68e02382374108a75e988f20f44657cbcc242261f57f28a7c1b36d"
+      "path": "assets/index-CcvKEcDQ.js",
+      "bytes": 482433,
+      "sha256": "49a3dcd67d289fa5d3be3bb946768d1213d23b44f6de0f2ff1a07cd6766c0ff4"
     },
     {
       "path": "assets/index-DtgMWB2P.css",
@@ -37,7 +37,7 @@
     {
       "path": "index.html",
       "bytes": 752,
-      "sha256": "81c729e2ebff4381599b953c1d55dd45ed6ce2dab90b30dc196818b11fb24283"
+      "sha256": "ea2fe5c4086f1dba1c0a76220040eb8ff1f94b7679910deb51c12d7edddd1595"
     },
     {
       "path": "mark.svg",

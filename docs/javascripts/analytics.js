@@ -12,6 +12,7 @@
     'mytendrils.blackgrid.com.au': 'MyTendrils'
   };
   const site = sites[location.hostname];
+  const marketplace = location.hostname === 'blackgrid.com.au' && /^\/marketplace(?:\/|$)/.test(location.pathname);
   const privateApps = ['pulse.blackgrid.com.au', 'pmgrid.blackgrid.com.au', 'proxp.blackgrid.com.au', 'mytendrils.blackgrid.com.au'];
   const products = { 'pulse.blackgrid.com.au': 'pulsegrid', 'pmgrid.blackgrid.com.au': 'pmgrid', 'proxp.blackgrid.com.au': 'proxp', 'mytendrils.blackgrid.com.au': 'mytendrils', 'wrw.blackgrid.com.au': 'wrw' };
   const campaignValues = {
@@ -27,6 +28,7 @@
     navigator.globalPrivacyControl === true || navigator.doNotTrack === '1' ||
     window['ga-disable-' + id] === true;
   function path(url) {
+    if (url.hostname === 'blackgrid.com.au' && /^\/marketplace(?:\/|$)/.test(url.pathname)) return '/marketplace/';
     if (!privateApps.includes(url.hostname)) {
       // Public editorial paths only; never retain email-like or credential paths.
       let decoded;
@@ -66,7 +68,7 @@
     return {
       page_location: measuredLocation(here),
       page_referrer: referrer,
-      page_title: privateApps.includes(here.hostname) ? site : (/@/.test(document.title || '') ? site : document.title),
+      page_title: marketplace ? 'ShadowGrid Marketplace' : privateApps.includes(here.hostname) ? site : (/@/.test(document.title || '') ? site : document.title),
       site_name: site
     };
   }
@@ -160,6 +162,8 @@
     if (choice) { preference(choice.dataset.bgAnalyticsChoice === 'enable'); return; }
     // Track only public, explicitly selected actions. Never inspect input values.
     if (location.hostname !== 'blackgrid.com.au' && location.hostname !== 'wrw.blackgrid.com.au') return;
+    // Marketplace invitations and recipient email drafts are application actions.
+    if (marketplace) return;
     const link = e.target.closest?.('a[href]');
     if (!link) return;
     const url = new URL(link.href, location.href);

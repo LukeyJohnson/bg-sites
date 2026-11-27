@@ -63,7 +63,7 @@ After checkout: **save your licence key → run the separate one-time Windows tr
 3. Describe a task. Review the resulting script and save it in the folder opened by **Open Folder**.
 4. Use **Refresh List**, select the tool and Run. Revise, save and run it again.
 
-An optional local MCP connection lets a compatible Windows AI client retrieve the design rules automatically. It supplies guidance on script shape; your AI authors the script. Marketplace tools are a separate future capability.
+An optional local MCP connection lets a compatible Windows AI client retrieve the design rules automatically. It supplies guidance on script shape; your AI authors the script. The [web marketplace](/marketplace/) supplies public tools and private sharing as a separate cloud service. Download a script there, save it in the folder opened by **Open Folder**, then use **Refresh List** and **Run**.
 
 [Get started with ShadowGrid](shadowgrid/install.md){ .md-button } — downloads, activation, Claude/Codex MCP setup and a complete first-script walkthrough.
 
@@ -80,7 +80,9 @@ Python is included; you do not need to install it separately. Bring existing scr
 | Verification examples | A hello-world tool and runtime environment check |
 | AI design guidance | Revit year-specific rules, a copy-ready starter prompt and an optional local guidance MCP |
 
-Company cloud libraries, a creator marketplace, additional applications and hosted ShadowGrid AI are future work. They are not included promises in this purchase.
+The [ShadowGrid web marketplace](/marketplace/) now provides a free public collection and private sharing of versioned scripts. Sign in with your Black Grid Google account to keep a private library or accept an invitation. Its web account is separate from desktop licence activation.
+
+Paid creator sales, inherited company workspace access, an in-Revit marketplace browser, additional applications and hosted ShadowGrid AI remain future work. They are not included promises in this purchase.
 
 ## Compatibility and purchase details
 

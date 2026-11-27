@@ -33,6 +33,7 @@ theme:
 nav:
   - Software:
       - ShadowGrid: projects/shadowgrid.md
+      - ShadowGrid Marketplace: /marketplace/
       - PulseGrid: projects/pulsegrid.md
       - Bakery for Dynamo: projects/bakery-for-dynamo.md
       - Deep Space:
